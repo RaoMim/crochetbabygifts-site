@@ -38,12 +38,20 @@ font-size:1.0625rem;line-height:1.7;-webkit-font-smoothing:antialiased}
 
 /* header */
 header.site{border-bottom:1px solid var(--linen);background:var(--cream)}
-header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;
-padding-top:1rem;padding-bottom:1rem;max-width:52rem}
-.brand{display:flex;align-items:center;gap:.55rem;text-decoration:none;color:var(--ink)}
+/* Flex items default to min-width:auto and will not shrink below their content, which on a
+   narrow phone makes the header wider than the viewport and scrolls the WHOLE page sideways.
+   flex-wrap + min-width:0 is the fix; do not remove either. */
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;
+gap:.5rem 1rem;flex-wrap:wrap;padding-top:1rem;padding-bottom:1rem;max-width:52rem}
+.brand{display:flex;align-items:center;gap:.55rem;text-decoration:none;color:var(--ink);
+min-width:0}
 .brand svg{display:block;flex:none}
-.brand b{font-family:var(--serif);font-weight:400;font-size:1.2rem;letter-spacing:-.01em;line-height:1}
-nav.site a{color:var(--ink-soft);text-decoration:none;font-size:.9rem;margin-left:1.1rem}
+.brand b{font-family:var(--serif);font-weight:400;font-size:1.2rem;letter-spacing:-.01em;
+line-height:1;white-space:nowrap}
+nav.site{min-width:0}
+nav.site a{color:var(--ink-soft);text-decoration:none;font-size:.9rem;margin-left:1.1rem;
+white-space:nowrap}
+nav.site a:first-child{margin-left:0}
 nav.site a:hover{color:var(--clay)}
 
 /* type */
@@ -115,7 +123,15 @@ footer.site p{margin:0 0 .6rem}
 .hero p{color:var(--ink-soft);font-size:1.1rem;max-width:32rem}
 .skip{position:absolute;left:-9999px}
 .skip:focus{left:1rem;top:1rem;background:var(--cream);padding:.5rem;z-index:9}
-@media(max-width:32rem){.tablewrap{margin-left:-1.25rem;margin-right:-1.25rem}}
+
+/* Long titles and URLs must break rather than widen the page. */
+h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
+@media(max-width:26rem){
+  .wrap{padding:0 1rem}
+  nav.site a{font-size:.85rem;margin-left:.85rem}
+  table{font-size:.88rem}
+  th,td{padding:.5rem .55rem}
+}
 </style>
 </head>
 <body>

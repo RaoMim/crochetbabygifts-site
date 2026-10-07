@@ -81,6 +81,10 @@ letter-spacing:.06em}
    so no negative margins here — they push the wrapper past the viewport on a phone. */
 .tablewrap{overflow-x:auto;max-width:100%;margin:1.5rem 0;
 -webkit-overflow-scrolling:touch;border:1px solid var(--linen);border-radius:4px}
+/* Diagrams from site/make_figures.py: rendered at 2x, shrink to the column, never overflow it. */
+figure.fig{margin:1.75rem 0}
+figure.fig img{display:block;width:100%;height:auto;border:1px solid var(--linen);border-radius:4px}
+figure.fig figcaption{margin-top:.55rem;font-size:.88rem;line-height:1.45;color:var(--ink-soft)}
 table{border-collapse:collapse;width:100%;font-size:.94rem;min-width:22rem}
 th,td{text-align:left;padding:.6rem .7rem;border-bottom:1px solid var(--linen);vertical-align:top}
 thead th{background:var(--oat);font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;

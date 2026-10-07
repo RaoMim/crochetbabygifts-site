@@ -81,6 +81,10 @@ letter-spacing:.06em}
    so no negative margins here — they push the wrapper past the viewport on a phone. */
 .tablewrap{overflow-x:auto;max-width:100%;margin:1.5rem 0;
 -webkit-overflow-scrolling:touch;border:1px solid var(--linen);border-radius:4px}
+/* Diagrams from site/make_figures.py: rendered at 2x, shrink to the column, never overflow it. */
+figure.fig{margin:1.75rem 0}
+figure.fig img{display:block;width:100%;height:auto;border:1px solid var(--linen);border-radius:4px}
+figure.fig figcaption{margin-top:.55rem;font-size:.88rem;line-height:1.45;color:var(--ink-soft)}
 table{border-collapse:collapse;width:100%;font-size:.94rem;min-width:22rem}
 th,td{text-align:left;padding:.6rem .7rem;border-bottom:1px solid var(--linen);vertical-align:top}
 thead th{background:var(--oat);font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;
@@ -305,6 +309,13 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 </tr>
 </tbody>
 </table></div>
+<!-- figure:hook-sizes-to-scale -->
+<figure class="fig" id="fig-hook-sizes-to-scale">
+<img src="/figures/hook-sizes-to-scale.png" width="608" height="520" alt="Twenty-two crochet hook sizes from 2 mm to 19 mm drawn as circles at one scale, each labelled with its millimetre size and US letter, with the 5 mm H-8 hook highlighted as the most used." loading="lazy" decoding="async">
+<figcaption>Hook shaft widths from the chart above, all drawn to one scale. Full colour marks the 5 mm H-8.</figcaption>
+</figure>
+<!-- /figure:hook-sizes-to-scale -->
+
 <h2>Why the US letters cannot be trusted</h2>
 <p>Three separate problems, all real, all still present in 2026:</p>
 <p><strong>The letter and the number disagree between brands.</strong> &ldquo;G&rdquo; is 4.0 mm on most hooks and 4.25 mm on some. &ldquo;M&rdquo; and &ldquo;N&rdquo; both appear on 9 mm hooks. &ldquo;N&rdquo; and &ldquo;P&rdquo; both appear on 10 mm hooks. Manufacturers never agreed a single mapping, and there is no body that could force one.</p>

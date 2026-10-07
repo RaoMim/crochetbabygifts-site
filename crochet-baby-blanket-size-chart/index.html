@@ -81,6 +81,10 @@ letter-spacing:.06em}
    so no negative margins here — they push the wrapper past the viewport on a phone. */
 .tablewrap{overflow-x:auto;max-width:100%;margin:1.5rem 0;
 -webkit-overflow-scrolling:touch;border:1px solid var(--linen);border-radius:4px}
+/* Diagrams from site/make_figures.py: rendered at 2x, shrink to the column, never overflow it. */
+figure.fig{margin:1.75rem 0}
+figure.fig img{display:block;width:100%;height:auto;border:1px solid var(--linen);border-radius:4px}
+figure.fig figcaption{margin-top:.55rem;font-size:.88rem;line-height:1.45;color:var(--ink-soft)}
 table{border-collapse:collapse;width:100%;font-size:.94rem;min-width:22rem}
 th,td{text-align:left;padding:.6rem .7rem;border-bottom:1px solid var(--linen);vertical-align:top}
 thead th{background:var(--oat);font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;
@@ -156,7 +160,7 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
   <p class="meta" style="margin-top:2.2rem">
     <span>Size Charts & Guides</span><span class="dot">&middot;</span>
     <time datetime="2026-07-30">30 July 2026</time>
-    <span class="dot">&middot;</span><span>4 min read</span>
+    <span class="dot">&middot;</span><span>5 min read</span>
   </p>
   <h1>Crochet Baby Blanket Size Chart: Every Size, Newborn to Toddler</h1>
   <p class="lede">A preemie blanket is about <strong>18 × 24 inches</strong>. A lovey is <strong>12–17 inches square</strong>. A receiving blanket is <strong>30 × 30 inches</strong>. A stroller blanket is <strong>30 × 35 inches</strong>. A crib blanket is <strong>36 × 52 inches</strong>. A toddler blanket is <strong>42 × 52 inches</strong>.</p>
@@ -216,6 +220,13 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 </tr>
 </tbody>
 </table></div>
+<!-- figure:blanket-sizes-to-scale -->
+<figure class="fig" id="fig-blanket-sizes-to-scale">
+<img src="/figures/blanket-sizes-to-scale.png" width="608" height="774" alt="Seven crochet baby blanket sizes drawn to the same scale, from a 12 by 12 inch lovey to a 42 by 52 inch toddler blanket, with the 27¼ by 51⅝ inch crib mattress minimum outlined on the 36 by 52 inch crib blanket." loading="lazy" decoding="async">
+<figcaption>Every size in the chart above, drawn to one scale. The dashed outline is the US minimum crib mattress.</figcaption>
+</figure>
+<!-- /figure:blanket-sizes-to-scale -->
+
 <p><strong>If you are making a gift and you do not know which to pick: make the 30 × 35 stroller size.</strong> It is big enough to be useful past the newborn weeks, small enough to finish, small enough to throw in a bag, and it is not a size that raises safe-sleep questions the way a full crib blanket does.</p>
 <h2>The one measurement that is actually fixed</h2>
 <p>Every size in that table is a community convention that got repeated until it looked official. One is not.</p>

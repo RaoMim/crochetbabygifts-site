@@ -81,6 +81,10 @@ letter-spacing:.06em}
    so no negative margins here — they push the wrapper past the viewport on a phone. */
 .tablewrap{overflow-x:auto;max-width:100%;margin:1.5rem 0;
 -webkit-overflow-scrolling:touch;border:1px solid var(--linen);border-radius:4px}
+/* Diagrams from site/make_figures.py: rendered at 2x, shrink to the column, never overflow it. */
+figure.fig{margin:1.75rem 0}
+figure.fig img{display:block;width:100%;height:auto;border:1px solid var(--linen);border-radius:4px}
+figure.fig figcaption{margin-top:.55rem;font-size:.88rem;line-height:1.45;color:var(--ink-soft)}
 table{border-collapse:collapse;width:100%;font-size:.94rem;min-width:22rem}
 th,td{text-align:left;padding:.6rem .7rem;border-bottom:1px solid var(--linen);vertical-align:top}
 thead th{background:var(--oat);font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;
@@ -156,7 +160,7 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
   <p class="meta" style="margin-top:2.2rem">
     <span>Size Charts & Guides</span><span class="dot">&middot;</span>
     <time datetime="2026-07-30">30 July 2026</time>
-    <span class="dot">&middot;</span><span>4 min read</span>
+    <span class="dot">&middot;</span><span>5 min read</span>
   </p>
   <h1>Yarn Weight Chart for Baby Projects (0–7, and What Each One Is Good For)</h1>
   <p class="lede"><strong>For most baby projects you want weight 3 (DK) or weight 4 (worsted).</strong> Weight 3 for anything worn — hats, booties, cardigans. Weight 4 for blankets. Everything else has a use, but those two cover the great majority of baby gifts.</p>
@@ -241,6 +245,13 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 </tr>
 </tbody>
 </table></div>
+<!-- figure:yarn-weight-hook-ranges -->
+<figure class="fig" id="fig-yarn-weight-hook-ranges">
+<img src="/figures/yarn-weight-hook-ranges.png" width="608" height="567" alt="Bar chart of the recommended crochet hook size for each yarn weight, from weight 0 lace at 1.6 to 2.25 mm up to weight 7 jumbo at 15 mm and up." loading="lazy" decoding="async">
+<figcaption>The hook-size column of the chart above, drawn as ranges.</figcaption>
+</figure>
+<!-- /figure:yarn-weight-hook-ranges -->
+
 <p>Note that &ldquo;baby&rdquo; appears as an alternative name for <strong>both</strong> weight 1 and weight 2. This is a genuine trap and it causes more wrong-gauge projects than anything else on this page. A label that says &ldquo;baby yarn&rdquo; tells you the manufacturer&rsquo;s marketing category, not the weight. <strong>Read the number, not the word.</strong></p>
 <h2>Which weight for which baby project</h2>
 <div class="tablewrap"><table>

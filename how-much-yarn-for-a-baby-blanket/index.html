@@ -81,6 +81,10 @@ letter-spacing:.06em}
    so no negative margins here — they push the wrapper past the viewport on a phone. */
 .tablewrap{overflow-x:auto;max-width:100%;margin:1.5rem 0;
 -webkit-overflow-scrolling:touch;border:1px solid var(--linen);border-radius:4px}
+/* Diagrams from site/make_figures.py: rendered at 2x, shrink to the column, never overflow it. */
+figure.fig{margin:1.75rem 0}
+figure.fig img{display:block;width:100%;height:auto;border:1px solid var(--linen);border-radius:4px}
+figure.fig figcaption{margin-top:.55rem;font-size:.88rem;line-height:1.45;color:var(--ink-soft)}
 table{border-collapse:collapse;width:100%;font-size:.94rem;min-width:22rem}
 th,td{text-align:left;padding:.6rem .7rem;border-bottom:1px solid var(--linen);vertical-align:top}
 thead th{background:var(--oat);font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;
@@ -156,7 +160,7 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
   <p class="meta" style="margin-top:2.2rem">
     <span>Size Charts & Guides</span><span class="dot">&middot;</span>
     <time datetime="2026-07-30">30 July 2026</time>
-    <span class="dot">&middot;</span><span>4 min read</span>
+    <span class="dot">&middot;</span><span>5 min read</span>
   </p>
   <h1>How Much Yarn for a Baby Blanket? Yardage by Size and Yarn Weight</h1>
   <p class="lede">For a <strong>30 × 35 inch stroller blanket in worsted-weight yarn worked in double crochet, budget about 1,000–1,150 yards</strong> — which is roughly three 364-yard skeins, with the third one only partly used.</p>
@@ -225,6 +229,13 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 </tr>
 </tbody>
 </table></div>
+<!-- figure:blanket-yarn-yardage -->
+<figure class="fig" id="fig-blanket-yarn-yardage">
+<img src="/figures/blanket-yarn-yardage.png" width="608" height="506" alt="Bar chart of estimated yards of worsted yarn for each baby blanket size in double crochet, from 190 to 220 yards for a lovey to 2,070 to 2,400 yards for a toddler blanket." loading="lazy" decoding="async">
+<figcaption>Estimated yardage from the chart above. The paler end of each bar is the range given in the table.</figcaption>
+</figure>
+<!-- /figure:blanket-yarn-yardage -->
+
 <p><strong>Always buy one skein more than the table says, in the same dye lot.</strong> A skein you didn&rsquo;t need can go back or become a matching hat. A skein you did need, three weeks later, in a different dye lot, ruins the blanket.</p>
 <h2>The method: yards per square inch</h2>
 <p>This is the part worth learning, because it works for any size, any stitch and any yarn.</p>

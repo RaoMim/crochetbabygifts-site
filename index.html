@@ -90,14 +90,29 @@ font-weight:650;border-bottom:1px solid var(--linen);white-space:nowrap}
 tbody tr:nth-child(even){background:rgba(239,227,212,.32)}
 td:first-child{font-weight:600}
 
-/* cards on the index */
-.cards{list-style:none;padding:0;margin:0}
-.cards li{border-bottom:1px solid var(--linen);padding:1.15rem 0}
-.cards li:last-child{border-bottom:0}
-.cards a{font-family:var(--serif);font-size:1.22rem;line-height:1.25;text-decoration:none;
-color:var(--ink);display:block;margin-bottom:.3rem}
-.cards a:hover{color:var(--clay)}
-.cards p{margin:0;font-size:.95rem;color:var(--ink-soft);line-height:1.55}
+/* cards on the index: a grid of image cards, one row per card on a phone */
+.cards{list-style:none;padding:0;margin:1.2rem 0 0;display:grid;
+grid-template-columns:repeat(auto-fill,minmax(14rem,1fr));gap:2rem 1.5rem}
+.cards li{position:relative;min-width:0}
+.cards a{font-family:var(--serif);font-size:1.15rem;line-height:1.25;text-decoration:none;
+color:var(--ink);display:block;margin-bottom:.35rem}
+/* The title link is stretched over the whole card, so the image is clickable too while the
+   link's accessible name stays the title alone. */
+.cards a::after{content:"";position:absolute;inset:0}
+.cards li:hover a{color:var(--clay)}
+.cards p{margin:0;font-size:.93rem;color:var(--ink-soft);line-height:1.55}
+/* One frame for every card image, so tall 2:3 pins, square photos and wide charts line up.
+   4:5 keeps most of a pin; the crop keeps the top, where pins carry their headline. */
+.card-thumb{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;
+object-position:50% 0;background:var(--oat);border:1px solid var(--linen);border-radius:4px;
+margin:0 0 .8rem}
+/* Code-drawn charts are shown whole: any crop cut their titles mid-word. Their background is
+   the same cream as the page, so the letterbox is invisible. */
+.card-thumb-figure{object-fit:contain;object-position:50% 50%;background:var(--cream)}
+/* Wide photos and the OG fallback (a 1200x630 title card) carry text a crop would cut, so they are
+   shown whole, inset on an oat mat. On plain cream the OG card read as a near-empty frame. */
+.card-thumb-wide-photo,.card-thumb-og{object-fit:contain;object-position:50% 50%;padding:0 .75rem}
+.cards li.card-noimg{border-top:3px solid var(--clay);padding-top:.9rem}
 .pill{display:inline-block;font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;
 color:var(--ink-soft);background:var(--oat);border-radius:2rem;padding:.18rem .6rem;
 margin-bottom:.5rem;font-weight:650}
@@ -129,6 +144,16 @@ footer.site p{margin:0 0 .6rem}
 
 /* Long titles and URLs must break rather than widen the page. */
 h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
+@media(max-width:34rem){
+  .cards{grid-template-columns:1fr;gap:0}
+  .cards li{display:grid;grid-template-columns:6.5rem minmax(0,1fr);column-gap:1rem;
+  align-items:start;padding:1.1rem 0;border-bottom:1px solid var(--linen)}
+  .cards li:last-child{border-bottom:0}
+  .card-thumb{grid-row:1 / span 2;margin:0}
+  .cards a{font-size:1.08rem}
+  .cards p{font-size:.9rem}
+  .cards li.card-noimg{display:block;border-top:0;padding-top:1.1rem}
+}
 @media(max-width:26rem){
   .wrap{padding:0 1rem}
   nav.site a{font-size:.85rem;margin-left:.85rem}
@@ -161,57 +186,41 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 </div>
 
 <div class="wrap wide">  <h2 class="pillar-h" id="charts">Size Charts & Guides</h2>
-  <ul class="cards">    <li>
-      <a href="/baby-hat-size-chart/">Baby Hat Size Chart by Age (Preemie to 3 Years)</a>
+  <ul class="cards">    <li>      <img class="card-thumb card-thumb-figure" src="/figures/hat-vs-head-circumference.png" width="1216" height="1401" alt="Paired bars for each age from preemie to 3 years comparing head circumference with the smaller finished hat circumference, for example newborn head 13 to 14 inches and hat 12 to 13 inches." loading="lazy" decoding="async">      <a href="/baby-hat-size-chart/">Baby Hat Size Chart by Age (Preemie to 3 Years)</a>
       <p>Head circumference and hat height by age for handmade baby hats, how much negative ease to use so the hat actually stays on, and why the age on the chart is the least reliable number in it.</p>
-    </li>    <li>
-      <a href="/yarn-weight-chart-for-baby-projects/">Yarn Weight Chart for Baby Projects (0–7, and What Each One Is Good For)</a>
+    </li>    <li>      <img class="card-thumb card-thumb-figure" src="/figures/yarn-weight-hook-ranges.png" width="1216" height="1134" alt="Bar chart of the recommended crochet hook size for each yarn weight, from weight 0 lace at 1.6 to 2.25 mm up to weight 7 jumbo at 15 mm and up." loading="lazy" decoding="async">      <a href="/yarn-weight-chart-for-baby-projects/">Yarn Weight Chart for Baby Projects (0–7, and What Each One Is Good For)</a>
       <p>The full standard yarn weight system from lace to jumbo, with the hook size and gauge for each — and which weights actually suit baby blankets, hats, booties and toys.</p>
-    </li>    <li>
-      <a href="/how-much-yarn-for-a-baby-blanket/">How Much Yarn for a Baby Blanket? Yardage by Size and Yarn Weight</a>
+    </li>    <li>      <img class="card-thumb card-thumb-figure" src="/figures/blanket-yarn-yardage.png" width="1216" height="1012" alt="Bar chart of estimated yards of worsted yarn for each baby blanket size in double crochet, from 190 to 220 yards for a lovey to 2,070 to 2,400 yards for a toddler blanket." loading="lazy" decoding="async">      <a href="/how-much-yarn-for-a-baby-blanket/">How Much Yarn for a Baby Blanket? Yardage by Size and Yarn Weight</a>
       <p>Estimate yarn for a crochet baby blanket by size, yarn weight and stitch — with the square-inch method that lets you work out any size yourself, not just the ones on the chart.</p>
-    </li>    <li>
-      <a href="/crochet-hook-size-chart/">Crochet Hook Size Chart: US, UK and Metric Conversions</a>
+    </li>    <li>      <img class="card-thumb card-thumb-figure" src="/figures/hook-sizes-to-scale.png" width="1216" height="1040" alt="Twenty-two crochet hook sizes from 2 mm to 19 mm drawn as circles at one scale, each labelled with its millimetre size and US letter, with the 5 mm H-8 hook highlighted as the most used." loading="lazy" decoding="async">      <a href="/crochet-hook-size-chart/">Crochet Hook Size Chart: US, UK and Metric Conversions</a>
       <p>Every crochet hook size converted between metric, US letter-number and old UK numbering — plus why the US letters are not reliable and the millimetre figure is the only one to trust.</p>
-    </li>    <li>
-      <a href="/crochet-baby-blanket-size-chart/">Crochet Baby Blanket Size Chart: Every Size, Newborn to Toddler</a>
+    </li>    <li>      <img class="card-thumb card-thumb-figure" src="/figures/blanket-sizes-to-scale.png" width="1216" height="1549" alt="Seven crochet baby blanket sizes drawn to the same scale, from a 12 by 12 inch lovey to a 42 by 52 inch toddler blanket, with the 27¼ by 51⅝ inch crib mattress minimum outlined on the 36 by 52 inch crib blanket." loading="lazy" decoding="async">      <a href="/crochet-baby-blanket-size-chart/">Crochet Baby Blanket Size Chart: Every Size, Newborn to Toddler</a>
       <p>The standard crochet baby blanket sizes in inches and centimetres, from preemie to toddler — plus the one measurement that actually matters and why the charts disagree.</p>
     </li>  </ul>  <h2 class="pillar-h" id="yarn">Yarn & Materials</h2>
-  <ul class="cards">    <li>
-      <a href="/baby-blanket-color-combinations/">Baby Blanket Color Combinations: Palettes That Work and How to Choose</a>
+  <ul class="cards">    <li>      <img class="card-thumb card-thumb-photo" src="/img/baby-blanket-color-combinations/baby-blanket-color-palettes-pin.jpg" width="1024" height="1536" alt="Nine folded striped crochet baby blankets, each shown with its colour swatches: cream, beige and taupe; rose, blush and cream; sage, cream and tan; blue, cream and grey; lavender, lilac and white; coral, peach and cream; mustard, butter yellow and cream; dusty blue, sage and cream; and pink, mint, lavender, butter yellow and cream." loading="lazy" decoding="async">      <a href="/baby-blanket-color-combinations/">Baby Blanket Color Combinations: Palettes That Work and How to Choose</a>
       <p>Nine baby blanket colour palettes in one table, plus the checks most guides skip: will the stripes show, will the colours bleed, and what can a newborn see?</p>
-    </li>    <li>
-      <a href="/machine-washable-yarn-for-baby-gifts/">Machine-Washable Yarn for Baby Gifts: What to Look For</a>
+    </li>    <li>      <img class="card-thumb card-thumb-og" src="/og/machine-washable-yarn-for-baby-gifts.png" width="1200" height="630" alt="" loading="lazy" decoding="async">      <a href="/machine-washable-yarn-for-baby-gifts/">Machine-Washable Yarn for Baby Gifts: What to Look For</a>
       <p>How to tell from a yarn label whether it will survive a real household wash — the four symbols that matter, what superwash actually means, and the words that mean the opposite of what you think.</p>
-    </li>    <li>
-      <a href="/best-yarn-for-baby-blankets/">The Best Yarn for Baby Blankets: Soft, Washable and Safe</a>
+    </li>    <li>      <img class="card-thumb card-thumb-og" src="/og/best-yarn-for-baby-blankets.png" width="1200" height="630" alt="" loading="lazy" decoding="async">      <a href="/best-yarn-for-baby-blankets/">The Best Yarn for Baby Blankets: Soft, Washable and Safe</a>
       <p>How to choose yarn for a baby blanket — the four properties that actually matter, what each fibre does in a wash, and why the softest yarn in the shop is often the wrong answer.</p>
-    </li>    <li>
-      <a href="/is-acrylic-yarn-safe-for-babies/">Is Acrylic Yarn Safe for Babies? An Honest Answer</a>
+    </li>    <li>      <img class="card-thumb card-thumb-og" src="/og/is-acrylic-yarn-safe-for-babies.png" width="1200" height="630" alt="" loading="lazy" decoding="async">      <a href="/is-acrylic-yarn-safe-for-babies/">Is Acrylic Yarn Safe for Babies? An Honest Answer</a>
       <p>Whether acrylic yarn is safe for baby blankets and clothes — the flammability question nobody addresses, the softness myth, and where the real concerns actually lie.</p>
     </li>  </ul>  <h2 class="pillar-h" id="care">Care, Washing & Safety</h2>
-  <ul class="cards">    <li>
-      <a href="/how-to-wash-a-crochet-baby-blanket/">How to Wash a Crochet Baby Blanket Without Ruining It</a>
+  <ul class="cards">    <li>      <img class="card-thumb card-thumb-og" src="/og/how-to-wash-a-crochet-baby-blanket.png" width="1200" height="630" alt="" loading="lazy" decoding="async">      <a href="/how-to-wash-a-crochet-baby-blanket/">How to Wash a Crochet Baby Blanket Without Ruining It</a>
       <p>How to wash a handmade crochet baby blanket by fibre — machine settings, what stretches it, how to dry it flat, and the two mistakes that cause permanent damage.</p>
-    </li>    <li>
-      <a href="/are-crochet-blankets-safe-for-babies/">Are Crochet Blankets Safe for Babies to Sleep With?</a>
+    </li>    <li>      <img class="card-thumb card-thumb-og" src="/og/are-crochet-blankets-safe-for-babies.png" width="1200" height="630" alt="" loading="lazy" decoding="async">      <a href="/are-crochet-blankets-safe-for-babies/">Are Crochet Blankets Safe for Babies to Sleep With?</a>
       <p>The direct answer on crochet blankets and infant sleep, what current safe-sleep guidance actually says, and how to give a handmade blanket that gets used safely.</p>
     </li>  </ul>  <h2 class="pillar-h" id="gifts">Gifting</h2>
-  <ul class="cards">    <li>
-      <a href="/what-to-give-at-a-baby-shower/">What to Give at a Baby Shower When You Can't Crochet</a>
+  <ul class="cards">    <li>      <img class="card-thumb card-thumb-og" src="/og/what-to-give-at-a-baby-shower.png" width="1200" height="630" alt="" loading="lazy" decoding="async">      <a href="/what-to-give-at-a-baby-shower/">What to Give at a Baby Shower When You Can't Crochet</a>
       <p>How to give a handmade-feeling baby shower gift without making one — what new parents actually run out of, what gets quietly returned, and how to make a bought gift feel personal.</p>
     </li>  </ul>  <h2 class="pillar-h" id="basics">Beginner Guides</h2>
-  <ul class="cards">    <li>
-      <a href="/crochet-donatella-clutch/">How to Crochet the Donatella Clutch: A Beginner-Friendly Tutorial</a>
+  <ul class="cards">    <li>      <img class="card-thumb card-thumb-wide-photo" src="/img/donatella/donatella-clutch-hero.jpg" width="1216" height="684" alt="A chunky sage green crochet clutch with a rolled top edge, beside the words Make Your Own Crochet Bag." loading="lazy" decoding="async">      <a href="/crochet-donatella-clutch/">How to Crochet the Donatella Clutch: A Beginner-Friendly Tutorial</a>
       <p>A step-by-step guide to Katy Handmade's Donatella crochet clutch: an oval base in single crochet, seven body rounds and a covered 19 cm spring closure, with video timestamps for every step.</p>
-    </li>    <li>
-      <a href="/crochet-tshirt-yarn-clutch/">Crochet T-Shirt Yarn Clutch Pattern: A Free Waistcoat-Stitch Clutch Built Around a 22 cm Snap Frame</a>
+    </li>    <li>      <img class="card-thumb card-thumb-photo" src="/img/clutch/clutch-02.jpg" width="900" height="900" alt="A blush T-shirt yarn clutch with a crocheted rim, on a wooden table beside a white vase of dried flowers." loading="lazy" decoding="async">      <a href="/crochet-tshirt-yarn-clutch/">Crochet T-Shirt Yarn Clutch Pattern: A Free Waistcoat-Stitch Clutch Built Around a 22 cm Snap Frame</a>
       <p>A free crochet T-shirt yarn clutch pattern in waistcoat stitch, sized to a 22 cm clic-clac snap frame: a rectangular base worked in rounds, straight sides, and the frame crocheted into the top edge, with every stitch count worked out from gauge.</p>
-    </li>    <li>
-      <a href="/crochet-pencil-case-pattern/">Crochet Pencil Case Pattern: A Free Single-Crochet Zipper Case in Three Sizes</a>
+    </li>    <li>      <img class="card-thumb card-thumb-figure" src="/figures/pencil-case-construction.png" width="1216" height="1391" alt="Four step diagrams for the standard crochet pencil case: a 10 by 10 inch single crochet rectangle, a 9 inch zipper sewn to two opposite edges with a fold line across the middle, the folded case with both side seams, and a bottom corner flattened into a triangle and seamed 1½ inches across." loading="lazy" decoding="async">      <a href="/crochet-pencil-case-pattern/">Crochet Pencil Case Pattern: A Free Single-Crochet Zipper Case in Three Sizes</a>
       <p>A free crochet pencil case pattern worked as one single-crochet rectangle: three sizes with exact zipper lengths, finished sizes and yarn estimates, plus the two steps that decide whether it comes out neat.</p>
-    </li>    <li>
-      <a href="/crochet-or-knit-for-baby-gifts/">Crochet or Knit for Baby Gifts? How to Choose</a>
+    </li>    <li>      <img class="card-thumb card-thumb-og" src="/og/crochet-or-knit-for-baby-gifts.png" width="1200" height="630" alt="" loading="lazy" decoding="async">      <a href="/crochet-or-knit-for-baby-gifts/">Crochet or Knit for Baby Gifts? How to Choose</a>
       <p>The real differences between crochet and knitting for baby items — speed, fabric, stretch, yarn use and which is easier to learn — with a straight recommendation for each project.</p>
     </li>  </ul></div>
 </main>

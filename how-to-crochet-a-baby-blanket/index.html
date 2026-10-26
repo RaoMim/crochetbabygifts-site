@@ -18,8 +18,19 @@
 
 <link rel="alternate" type="application/rss+xml" title="Crochet Baby Gifts" href="https://crochetbabygifts.com/rss.xml">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="/fonts/dmseriftext-latin.ttf" as="font" type="font/ttf" crossorigin>
-
+<link rel="preload" href="/fonts/dmseriftext-latin.ttf" as="font" type="font/ttf" crossorigin><!-- Google Analytics 4 with Consent Mode v2. Ad storage is denied everywhere (no ads). Analytics cookies are denied
+by default in the EEA, UK and Switzerland, where Google applies the region list by the visitor's IP, until the visitor
+accepts the consent bar at the foot of the page. A stored choice ("cbg-consent" in localStorage) wins everywhere. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E6156532FH"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'granted'});
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500,
+region:['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']});
+(function(){var c=null;try{c=localStorage.getItem('cbg-consent');}catch(e){}if(c==='granted'||c==='denied'){gtag('consent','update',{analytics_storage:c});}})();
+gtag('js',new Date());
+gtag('config','G-E6156532FH',{allow_google_signals:false,allow_ad_personalization_signals:false});
+</script>
 <style>
 @font-face{font-family:"DM Serif Text";src:url("/fonts/dmseriftext-latin.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
 :root{
@@ -132,6 +143,13 @@ border-bottom:2px solid var(--clay)}
 margin:0 0 .5rem;font-weight:700;color:var(--ink-soft)}
 .related ul{margin:0;padding-left:1.1rem}
 .related li{margin-bottom:.35rem}
+
+/* consent bar (Google Analytics) */
+.consent{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--oat);border-top:1px solid var(--linen);
+padding:.8rem 1rem;font-size:.9rem;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center}
+.consent[hidden]{display:none}
+.consent p{margin:0}
+.consent button{font:inherit;padding:.35rem .9rem;border-radius:4px;border:1px solid var(--ink-soft);background:#fff;cursor:pointer}
 
 /* footer */
 footer.site{border-top:1px solid var(--linen);margin-top:4rem;padding:2rem 0 3rem;
@@ -713,7 +731,19 @@ Soft, machine-washable acrylic is the usual choice for a gift. Our guide to the 
     <p>&copy; 2026 Crochet Baby Gifts. Nothing here is medical advice — for infant sleep
     safety, follow your paediatrician and current AAP guidance.</p>
   </div>
-</footer>
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://crochetbabygifts.com/#org", "name": "Crochet Baby Gifts", "url": "https://crochetbabygifts.com/"}, {"@type": "WebSite", "@id": "https://crochetbabygifts.com/#website", "url": "https://crochetbabygifts.com/", "name": "Crochet Baby Gifts", "description": "Size charts, yarn guides and gifting advice for handmade baby gifts.", "publisher": {"@id": "https://crochetbabygifts.com/#org"}, "inLanguage": "en"}, {"@type": "Article", "@id": "https://crochetbabygifts.com/how-to-crochet-a-baby-blanket/#article", "headline": "How to Crochet a Baby Blanket for Beginners: Free Pattern in Every Size", "description": "Your first crochet baby blanket in half double crochet, step by step: how many to chain from one swatch, the same stitch count on every row, a single crochet border counted for every side, and three checks before you frog uneven edges. Four sizes, three yarn weights.", "url": "https://crochetbabygifts.com/how-to-crochet-a-baby-blanket/", "datePublished": "2026-10-14", "dateModified": "2026-10-14", "articleSection": "Beginner Guides", "author": {"@id": "https://crochetbabygifts.com/#org"}, "publisher": {"@id": "https://crochetbabygifts.com/#org"}, "isPartOf": {"@id": "https://crochetbabygifts.com/#website"}, "image": "https://crochetbabygifts.com/img/heroes/how-to-crochet-a-baby-blanket-hero-og.jpg", "inLanguage": "en"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://crochetbabygifts.com/"}, {"@type": "ListItem", "position": 2, "name": "How to Crochet a Baby Blanket for Beginners: Free Pattern in Every Size", "item": "https://crochetbabygifts.com/how-to-crochet-a-baby-blanket/"}]}]}</script>
+</footer><div id="cbg-consent" class="consent" role="region" aria-label="Cookie choice" hidden>
+  <p>We use Google Analytics cookies to count visits. <a href="/privacy/">Privacy</a></p>
+  <button type="button" data-consent="granted">Accept</button>
+  <button type="button" data-consent="denied">Decline</button>
+</div>
+<script>
+(function(){var bar=document.getElementById('cbg-consent');if(!bar)return;var c=null;try{c=localStorage.getItem('cbg-consent');}catch(e){}
+var tz='';try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone||'';}catch(e){}
+var europe=/^Europe\//.test(tz)||/^Atlantic\/(Reykjavik|Canary|Madeira|Azores|Faroe)$/.test(tz);
+window.cbgConsentReset=function(){try{localStorage.removeItem('cbg-consent');}catch(e){}bar.hidden=false;return false;};
+if(!c&&europe){bar.hidden=false;}
+bar.addEventListener('click',function(e){var v=e.target.getAttribute('data-consent');if(!v)return;
+try{localStorage.setItem('cbg-consent',v);}catch(err){}if(window.gtag){gtag('consent','update',{analytics_storage:v});}bar.hidden=true;});})();
+</script><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://crochetbabygifts.com/#org", "name": "Crochet Baby Gifts", "url": "https://crochetbabygifts.com/"}, {"@type": "WebSite", "@id": "https://crochetbabygifts.com/#website", "url": "https://crochetbabygifts.com/", "name": "Crochet Baby Gifts", "description": "Size charts, yarn guides and gifting advice for handmade baby gifts.", "publisher": {"@id": "https://crochetbabygifts.com/#org"}, "inLanguage": "en"}, {"@type": "Article", "@id": "https://crochetbabygifts.com/how-to-crochet-a-baby-blanket/#article", "headline": "How to Crochet a Baby Blanket for Beginners: Free Pattern in Every Size", "description": "Your first crochet baby blanket in half double crochet, step by step: how many to chain from one swatch, the same stitch count on every row, a single crochet border counted for every side, and three checks before you frog uneven edges. Four sizes, three yarn weights.", "url": "https://crochetbabygifts.com/how-to-crochet-a-baby-blanket/", "datePublished": "2026-10-14", "dateModified": "2026-10-14", "articleSection": "Beginner Guides", "author": {"@id": "https://crochetbabygifts.com/#org"}, "publisher": {"@id": "https://crochetbabygifts.com/#org"}, "isPartOf": {"@id": "https://crochetbabygifts.com/#website"}, "image": "https://crochetbabygifts.com/img/heroes/how-to-crochet-a-baby-blanket-hero-og.jpg", "inLanguage": "en"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://crochetbabygifts.com/"}, {"@type": "ListItem", "position": 2, "name": "How to Crochet a Baby Blanket for Beginners: Free Pattern in Every Size", "item": "https://crochetbabygifts.com/how-to-crochet-a-baby-blanket/"}]}]}</script>
 </body>
 </html>

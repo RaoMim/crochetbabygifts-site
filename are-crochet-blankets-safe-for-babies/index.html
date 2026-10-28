@@ -18,7 +18,8 @@
 
 <link rel="alternate" type="application/rss+xml" title="Crochet Baby Gifts" href="https://crochetbabygifts.com/rss.xml">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="/fonts/dmseriftext-latin.ttf" as="font" type="font/ttf" crossorigin><!-- Google Analytics 4 with Consent Mode v2. Ad storage is denied everywhere (no ads). Analytics cookies are denied
+<link rel="preload" href="/fonts/dmseriftext-latin.ttf" as="font" type="font/ttf" crossorigin><!-- Google Analytics 4 with Consent Mode v2. Ad storage is denied for the GA tag, which needs none (the HBAgency ads
+ask for consent through their own IAB TCF window). Analytics cookies are denied
 by default in the EEA, UK and Switzerland, where Google applies the region list by the visitor's IP, until the visitor
 accepts the consent bar at the foot of the page. A stored choice ("cbg-consent" in localStorage) wins everywhere. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6156532FH"></script>
@@ -30,7 +31,8 @@ region:['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','I
 (function(){var c=null;try{c=localStorage.getItem('cbg-consent');}catch(e){}if(c==='granted'||c==='denied'){gtag('consent','update',{analytics_storage:c});}})();
 gtag('js',new Date());
 gtag('config','G-E6156532FH',{allow_google_signals:false,allow_ad_personalization_signals:false});
-</script>
+</script><!-- HBAgency header bidding, article pages only (D9). It brings its own IAB TCF consent window for EU/UK visitors. -->
+<script defer src="https://d3u598arehftfk.cloudfront.net/prebid_hb_40090_44308.js"></script>
 <style>
 @font-face{font-family:"DM Serif Text";src:url("/fonts/dmseriftext-latin.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
 :root{
@@ -144,6 +146,12 @@ margin:0 0 .5rem;font-weight:700;color:var(--ink-soft)}
 .related ul{margin:0;padding-left:1.1rem}
 .related li{margin-bottom:.35rem}
 
+/* ad slots (HBAgency); min-height keeps the text from jumping when an ad loads */
+.ad-slot{display:block;text-align:center;margin:1.6rem auto;overflow:hidden}
+.ad-top{min-height:100px}
+.ad-mid{min-height:280px}
+@media (min-width:48rem){.ad-top{min-height:250px}}
+
 /* consent bar (Google Analytics) */
 .consent{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--oat);border-top:1px solid var(--linen);
 padding:.8rem 1rem;font-size:.9rem;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center}
@@ -203,7 +211,8 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
     <time datetime="2026-07-30">30 July 2026</time>
     <span class="dot">&middot;</span><span>4 min read</span>
   </p>
-  <h1>Are Crochet Blankets Safe for Babies to Sleep With?</h1>  <figure class="fig hero"><img src="/img/heroes/are-crochet-blankets-safe-for-babies-hero.webp" width="1672" height="941" alt="Folded sage and cream crochet blanket on a craft table beside yarn and a hook." srcset="/img/heroes/are-crochet-blankets-safe-for-babies-hero-480w.webp 480w, /img/heroes/are-crochet-blankets-safe-for-babies-hero-800w.webp 800w, /img/heroes/are-crochet-blankets-safe-for-babies-hero-1200w.webp 1200w, /img/heroes/are-crochet-blankets-safe-for-babies-hero.webp 1672w" sizes="(max-width: 38rem) calc(100vw - 2rem), 35.5rem" loading="eager" fetchpriority="high" decoding="async"></figure>  <p class="lede"><strong>No — not in the sleep space, for a baby under 12 months.</strong> Current infant safe-sleep guidance is that babies sleep alone, on their back, on a firm flat surface, with nothing else in the crib: no blankets, no pillows, no bumpers, no soft toys. A crocheted blanket is loose bedding, and an open-stitch one adds an entanglement risk on top of that.</p>
+  <h1>Are Crochet Blankets Safe for Babies to Sleep With?</h1>  <figure class="fig hero"><img src="/img/heroes/are-crochet-blankets-safe-for-babies-hero.webp" width="1672" height="941" alt="Folded sage and cream crochet blanket on a craft table beside yarn and a hook." srcset="/img/heroes/are-crochet-blankets-safe-for-babies-hero-480w.webp 480w, /img/heroes/are-crochet-blankets-safe-for-babies-hero-800w.webp 800w, /img/heroes/are-crochet-blankets-safe-for-babies-hero-1200w.webp 1200w, /img/heroes/are-crochet-blankets-safe-for-babies-hero.webp 1672w" sizes="(max-width: 38rem) calc(100vw - 2rem), 35.5rem" loading="eager" fetchpriority="high" decoding="async"></figure>  <div class="ad-slot ad-top" id="hbagency_space_346236"></div>
+  <p class="lede"><strong>No — not in the sleep space, for a baby under 12 months.</strong> Current infant safe-sleep guidance is that babies sleep alone, on their back, on a firm flat surface, with nothing else in the crib: no blankets, no pillows, no bumpers, no soft toys. A crocheted blanket is loose bedding, and an open-stitch one adds an entanglement risk on top of that.</p>
 <p><strong>Yes — everywhere else, supervised.</strong> Tummy time, the pram, the play mat, over the car seat, on the sofa, in the photographs, and in the toddler bed later. This is not a small list, and it is where handmade blankets actually live.</p>
 <p>This page says the uncomfortable thing plainly because a lot of craft content does not, and because someone is going to make this blanket as a gift and needs to know how to talk about it.</p>
 <h2>What the guidance actually says</h2>
@@ -221,6 +230,7 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 <p><strong>Holes.</strong> Fingers, toes and occasionally a whole hand fit through the gaps in a granny square or a lacy stitch pattern. In supervised use this is a non-event. Unsupervised, it is an entanglement risk, and it is worse with larger gaps and bulkier yarn.</p>
 <p><strong>Weight and drape.</strong> A super-bulky blanket is heavy. That is lovely on a sofa and not something you want unsupervised near an infant.</p>
 <p>If you want to reduce both, work a <strong>tight stitch in a lighter yarn</strong> — single crochet or half double in weight 3 or 4 — rather than an open granny square in weight 6.</p>
+<div class="ad-slot ad-mid" id="hbagency_space_346237"></div>
 <h2>So what do you use for sleep?</h2>
 <p>A <strong>wearable blanket or sleep sack</strong> — a sleeved or sleeveless bag the baby wears — is the standard recommendation, because it provides warmth without anything loose in the crib. That is what to buy for the sleeping part. The handmade blanket is for the rest of the day.</p>
 <p>Once a baby is over 12 months, the guidance relaxes and a blanket in the bed becomes reasonable. This is when a crib-sized handmade blanket comes into its own, and it is why the crib and toddler sizes are worth making even though they will not be used at newborn stage.</p>
@@ -247,8 +257,9 @@ Yes, with supervision, tucked in below the chest and not near the face. Take it 
 A wearable blanket or sleep sack. Pair it with the handmade blanket as one gift and you have covered both.</p>  <aside class="related">
     <h2>Keep reading</h2>
     <ul>      <li><a href="/crochet-baby-blanket-size-chart/">Crochet Baby Blanket Size Chart: Every Size, Newborn to Toddler</a></li>      <li><a href="/best-yarn-for-baby-blankets/">The Best Yarn for Baby Blankets: Soft, Washable and Safe</a></li>      <li><a href="/what-to-give-at-a-baby-shower/">What to Give at a Baby Shower When You Can't Crochet</a></li>    </ul>
-  </aside></article>
-</main>
+  </aside></article><div id="hbagency_space_346234"></div>
+<div id="hbagency_space_346233"></div>
+<div id="hbagency_space_346235"></div></main>
 
 <footer class="site">
   <div class="wrap">

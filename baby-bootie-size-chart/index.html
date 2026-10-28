@@ -18,7 +18,8 @@
 
 <link rel="alternate" type="application/rss+xml" title="Crochet Baby Gifts" href="https://crochetbabygifts.com/rss.xml">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="/fonts/dmseriftext-latin.ttf" as="font" type="font/ttf" crossorigin><!-- Google Analytics 4 with Consent Mode v2. Ad storage is denied everywhere (no ads). Analytics cookies are denied
+<link rel="preload" href="/fonts/dmseriftext-latin.ttf" as="font" type="font/ttf" crossorigin><!-- Google Analytics 4 with Consent Mode v2. Ad storage is denied for the GA tag, which needs none (the HBAgency ads
+ask for consent through their own IAB TCF window). Analytics cookies are denied
 by default in the EEA, UK and Switzerland, where Google applies the region list by the visitor's IP, until the visitor
 accepts the consent bar at the foot of the page. A stored choice ("cbg-consent" in localStorage) wins everywhere. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6156532FH"></script>
@@ -30,7 +31,8 @@ region:['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','I
 (function(){var c=null;try{c=localStorage.getItem('cbg-consent');}catch(e){}if(c==='granted'||c==='denied'){gtag('consent','update',{analytics_storage:c});}})();
 gtag('js',new Date());
 gtag('config','G-E6156532FH',{allow_google_signals:false,allow_ad_personalization_signals:false});
-</script>
+</script><!-- HBAgency header bidding, article pages only (D9). It brings its own IAB TCF consent window for EU/UK visitors. -->
+<script defer src="https://d3u598arehftfk.cloudfront.net/prebid_hb_40090_44308.js"></script>
 <style>
 @font-face{font-family:"DM Serif Text";src:url("/fonts/dmseriftext-latin.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
 :root{
@@ -144,6 +146,12 @@ margin:0 0 .5rem;font-weight:700;color:var(--ink-soft)}
 .related ul{margin:0;padding-left:1.1rem}
 .related li{margin-bottom:.35rem}
 
+/* ad slots (HBAgency); min-height keeps the text from jumping when an ad loads */
+.ad-slot{display:block;text-align:center;margin:1.6rem auto;overflow:hidden}
+.ad-top{min-height:100px}
+.ad-mid{min-height:280px}
+@media (min-width:48rem){.ad-top{min-height:250px}}
+
 /* consent bar (Google Analytics) */
 .consent{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--oat);border-top:1px solid var(--linen);
 padding:.8rem 1rem;font-size:.9rem;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center}
@@ -203,7 +211,8 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
     <time datetime="2026-10-17">17 October 2026</time>
     <span class="dot">&middot;</span><span>4 min read</span>
   </p>
-  <h1>Baby Bootie Size Chart: Sole Length by Age</h1>  <p class="lede"><strong>A newborn bootie sole is 3 to 3½ inches long. Add about half an inch per three months after that.</strong> Sole length is the only measurement that matters for booties — width sorts itself out, and there is no standard bootie sizing anywhere, so every chart including this one is a convention.</p>
+  <h1>Baby Bootie Size Chart: Sole Length by Age</h1>  <div class="ad-slot ad-top" id="hbagency_space_346236"></div>
+  <p class="lede"><strong>A newborn bootie sole is 3 to 3½ inches long. Add about half an inch per three months after that.</strong> Sole length is the only measurement that matters for booties — width sorts itself out, and there is no standard bootie sizing anywhere, so every chart including this one is a convention.</p>
 <h2>The size chart</h2>
 <div class="tablewrap"><table>
 <thead>
@@ -278,6 +287,7 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 <p><strong>1. An ankle strap, tie or ribbed cuff.</strong> A plain bootie with an open ankle will come off within the hour. Something has to close around the ankle. A ribbed cuff is the safest option for a gift because it needs no adjustment and there is nothing to come loose.</p>
 <p><strong>2. A snug fit through the instep</strong>, not just the right sole length. Most booties that fall off are correctly sized on the sole and too loose across the top of the foot.</p>
 <p>If you want booties that stay on and you can only do one thing, do the ribbed cuff.</p>
+<div class="ad-slot ad-mid" id="hbagency_space_346237"></div>
 <h2>A safety note on ties</h2>
 <p><strong>Ribbons and drawstring ties on baby footwear are an entanglement risk</strong>, and it is the reason many hospital donation programmes ban them outright.</p>
 <p>If you are making booties as a gift and want them worn without supervision, use a <strong>ribbed cuff</strong> or a <strong>crocheted-in strap with a securely fastened button</strong> rather than a threaded ribbon. If you use a button, sew it on with the same thread you would trust on a coat and give it a firm tug — a button that comes off a bootie is a choking hazard, not just a repair.</p>
@@ -314,8 +324,9 @@ Snug at the ankle, roomy at the toes. Never tight across the foot — infant fee
 For a supervised keepsake, yes. For everyday wear or a hospital donation, no — use a ribbed cuff instead.</p>  <aside class="related">
     <h2>Keep reading</h2>
     <ul>      <li><a href="/baby-hat-size-chart/">Baby Hat Size Chart by Age (Preemie to 3 Years)</a></li>      <li><a href="/crochet-baby-blanket-size-chart/">Crochet Baby Blanket Size Chart: Every Size, Newborn to Toddler</a></li>      <li><a href="/crochet-hook-size-chart/">Crochet Hook Size Chart: US, UK and Metric Conversions</a></li>    </ul>
-  </aside></article>
-</main>
+  </aside></article><div id="hbagency_space_346234"></div>
+<div id="hbagency_space_346233"></div>
+<div id="hbagency_space_346235"></div></main>
 
 <footer class="site">
   <div class="wrap">

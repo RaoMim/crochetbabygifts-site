@@ -18,7 +18,8 @@
 
 <link rel="alternate" type="application/rss+xml" title="Crochet Baby Gifts" href="https://crochetbabygifts.com/rss.xml">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="/fonts/dmseriftext-latin.ttf" as="font" type="font/ttf" crossorigin><!-- Google Analytics 4 with Consent Mode v2. Ad storage is denied everywhere (no ads). Analytics cookies are denied
+<link rel="preload" href="/fonts/dmseriftext-latin.ttf" as="font" type="font/ttf" crossorigin><!-- Google Analytics 4 with Consent Mode v2. Ad storage is denied for the GA tag, which needs none (the HBAgency ads
+ask for consent through their own IAB TCF window). Analytics cookies are denied
 by default in the EEA, UK and Switzerland, where Google applies the region list by the visitor's IP, until the visitor
 accepts the consent bar at the foot of the page. A stored choice ("cbg-consent" in localStorage) wins everywhere. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6156532FH"></script>
@@ -30,7 +31,8 @@ region:['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','I
 (function(){var c=null;try{c=localStorage.getItem('cbg-consent');}catch(e){}if(c==='granted'||c==='denied'){gtag('consent','update',{analytics_storage:c});}})();
 gtag('js',new Date());
 gtag('config','G-E6156532FH',{allow_google_signals:false,allow_ad_personalization_signals:false});
-</script>
+</script><!-- HBAgency header bidding, article pages only (D9). It brings its own IAB TCF consent window for EU/UK visitors. -->
+<script defer src="https://d3u598arehftfk.cloudfront.net/prebid_hb_40090_44308.js"></script>
 <style>
 @font-face{font-family:"DM Serif Text";src:url("/fonts/dmseriftext-latin.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
 :root{
@@ -144,6 +146,12 @@ margin:0 0 .5rem;font-weight:700;color:var(--ink-soft)}
 .related ul{margin:0;padding-left:1.1rem}
 .related li{margin-bottom:.35rem}
 
+/* ad slots (HBAgency); min-height keeps the text from jumping when an ad loads */
+.ad-slot{display:block;text-align:center;margin:1.6rem auto;overflow:hidden}
+.ad-top{min-height:100px}
+.ad-mid{min-height:280px}
+@media (min-width:48rem){.ad-top{min-height:250px}}
+
 /* consent bar (Google Analytics) */
 .consent{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--oat);border-top:1px solid var(--linen);
 padding:.8rem 1rem;font-size:.9rem;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center}
@@ -203,7 +211,8 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
     <time datetime="2026-07-30">30 July 2026</time>
     <span class="dot">&middot;</span><span>4 min read</span>
   </p>
-  <h1>Crochet Hook Size Chart: US, UK and Metric Conversions</h1>  <figure class="fig hero"><img src="/img/heroes/crochet-hook-size-chart-hero.webp" width="1672" height="941" alt="Crochet hooks in several sizes arranged beside cream yarn." srcset="/img/heroes/crochet-hook-size-chart-hero-480w.webp 480w, /img/heroes/crochet-hook-size-chart-hero-800w.webp 800w, /img/heroes/crochet-hook-size-chart-hero-1200w.webp 1200w, /img/heroes/crochet-hook-size-chart-hero.webp 1672w" sizes="(max-width: 38rem) calc(100vw - 2rem), 35.5rem" loading="eager" fetchpriority="high" decoding="async"></figure>  <p class="lede"><strong>The millimetre measurement is the real size. Everything else is a label.</strong> A US &ldquo;G&rdquo; hook is 4 mm from one brand and 4.25 mm from another, and the old UK numbers run backwards from the US ones. If a pattern gives you a letter, find the millimetre equivalent below and use that.</p>
+  <h1>Crochet Hook Size Chart: US, UK and Metric Conversions</h1>  <figure class="fig hero"><img src="/img/heroes/crochet-hook-size-chart-hero.webp" width="1672" height="941" alt="Crochet hooks in several sizes arranged beside cream yarn." srcset="/img/heroes/crochet-hook-size-chart-hero-480w.webp 480w, /img/heroes/crochet-hook-size-chart-hero-800w.webp 800w, /img/heroes/crochet-hook-size-chart-hero-1200w.webp 1200w, /img/heroes/crochet-hook-size-chart-hero.webp 1672w" sizes="(max-width: 38rem) calc(100vw - 2rem), 35.5rem" loading="eager" fetchpriority="high" decoding="async"></figure>  <div class="ad-slot ad-top" id="hbagency_space_346236"></div>
+  <p class="lede"><strong>The millimetre measurement is the real size. Everything else is a label.</strong> A US &ldquo;G&rdquo; hook is 4 mm from one brand and 4.25 mm from another, and the old UK numbers run backwards from the US ones. If a pattern gives you a letter, find the millimetre equivalent below and use that.</p>
 <h2>The conversion chart</h2>
 <div class="tablewrap"><table>
 <thead>
@@ -362,6 +371,7 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 <p><strong>The UK system runs the opposite way.</strong> Bigger UK number means <em>smaller</em> hook. UK 14 is 2 mm; UK 000 is 10 mm. If you are following a British pattern from before about 2000, this catches almost everyone once.</p>
 <p><strong>The old UK numbers overlap the modern US numbers.</strong> A pattern that just says &ldquo;size 7 hook&rdquo; is ambiguous: US 7 is 4.5 mm, and UK 7 is also 4.5 mm — a coincidence that does not hold anywhere else on the chart. Size 4 is 6 mm in the UK and 3.5 mm in the US, where it is written E-4.</p>
 <p><strong>The fix is one habit:</strong> when you write down a hook size, write the millimetres. When a pattern gives you a letter, convert it once and note it in the margin.</p>
+<div class="ad-slot ad-mid" id="hbagency_space_346237"></div>
 <h2>Which hook for baby projects</h2>
 <div class="tablewrap"><table>
 <thead>
@@ -422,8 +432,9 @@ No. The handle is different; the hook shaft is the stated millimetre size. If yo
 Because the manufacturers never agreed. Read the millimetres stamped on the shaft.</p>  <aside class="related">
     <h2>Keep reading</h2>
     <ul>      <li><a href="/yarn-weight-chart-for-baby-projects/">Yarn Weight Chart for Baby Projects (0–7, and What Each One Is Good For)</a></li>      <li><a href="/how-much-yarn-for-a-baby-blanket/">How Much Yarn for a Baby Blanket? Yardage by Size and Yarn Weight</a></li>      <li><a href="/crochet-or-knit-for-baby-gifts/">Crochet or Knit for Baby Gifts? How to Choose</a></li>    </ul>
-  </aside></article>
-</main>
+  </aside></article><div id="hbagency_space_346234"></div>
+<div id="hbagency_space_346233"></div>
+<div id="hbagency_space_346235"></div></main>
 
 <footer class="site">
   <div class="wrap">

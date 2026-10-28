@@ -18,7 +18,8 @@
 
 <link rel="alternate" type="application/rss+xml" title="Crochet Baby Gifts" href="https://crochetbabygifts.com/rss.xml">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="/fonts/dmseriftext-latin.ttf" as="font" type="font/ttf" crossorigin><!-- Google Analytics 4 with Consent Mode v2. Ad storage is denied everywhere (no ads). Analytics cookies are denied
+<link rel="preload" href="/fonts/dmseriftext-latin.ttf" as="font" type="font/ttf" crossorigin><!-- Google Analytics 4 with Consent Mode v2. Ad storage is denied for the GA tag, which needs none (the HBAgency ads
+ask for consent through their own IAB TCF window). Analytics cookies are denied
 by default in the EEA, UK and Switzerland, where Google applies the region list by the visitor's IP, until the visitor
 accepts the consent bar at the foot of the page. A stored choice ("cbg-consent" in localStorage) wins everywhere. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6156532FH"></script>
@@ -30,7 +31,8 @@ region:['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','I
 (function(){var c=null;try{c=localStorage.getItem('cbg-consent');}catch(e){}if(c==='granted'||c==='denied'){gtag('consent','update',{analytics_storage:c});}})();
 gtag('js',new Date());
 gtag('config','G-E6156532FH',{allow_google_signals:false,allow_ad_personalization_signals:false});
-</script>
+</script><!-- HBAgency header bidding, article pages only (D9). It brings its own IAB TCF consent window for EU/UK visitors. -->
+<script defer src="https://d3u598arehftfk.cloudfront.net/prebid_hb_40090_44308.js"></script>
 <style>
 @font-face{font-family:"DM Serif Text";src:url("/fonts/dmseriftext-latin.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
 :root{
@@ -144,6 +146,12 @@ margin:0 0 .5rem;font-weight:700;color:var(--ink-soft)}
 .related ul{margin:0;padding-left:1.1rem}
 .related li{margin-bottom:.35rem}
 
+/* ad slots (HBAgency); min-height keeps the text from jumping when an ad loads */
+.ad-slot{display:block;text-align:center;margin:1.6rem auto;overflow:hidden}
+.ad-top{min-height:100px}
+.ad-mid{min-height:280px}
+@media (min-width:48rem){.ad-top{min-height:250px}}
+
 /* consent bar (Google Analytics) */
 .consent{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--oat);border-top:1px solid var(--linen);
 padding:.8rem 1rem;font-size:.9rem;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center}
@@ -203,7 +211,8 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
     <time datetime="2026-07-30">30 July 2026</time>
     <span class="dot">&middot;</span><span>4 min read</span>
   </p>
-  <h1>Is Acrylic Yarn Safe for Babies? An Honest Answer</h1>  <figure class="fig hero"><img src="/img/heroes/is-acrylic-yarn-safe-for-babies-hero.webp" width="1672" height="941" alt="Dusty blue and sage yarn skeins beside a cream crochet swatch." srcset="/img/heroes/is-acrylic-yarn-safe-for-babies-hero-480w.webp 480w, /img/heroes/is-acrylic-yarn-safe-for-babies-hero-800w.webp 800w, /img/heroes/is-acrylic-yarn-safe-for-babies-hero-1200w.webp 1200w, /img/heroes/is-acrylic-yarn-safe-for-babies-hero.webp 1672w" sizes="(max-width: 38rem) calc(100vw - 2rem), 35.5rem" loading="eager" fetchpriority="high" decoding="async"></figure>  <p class="lede"><strong>Yes. Acrylic yarn is safe for baby items and it is the most widely used fibre for them.</strong> It is hypoallergenic in the practical sense — it is not a protein fibre, so it does not provoke wool sensitivity — it is machine washable, and it does not shed the way some novelty fibres do.</p>
+  <h1>Is Acrylic Yarn Safe for Babies? An Honest Answer</h1>  <figure class="fig hero"><img src="/img/heroes/is-acrylic-yarn-safe-for-babies-hero.webp" width="1672" height="941" alt="Dusty blue and sage yarn skeins beside a cream crochet swatch." srcset="/img/heroes/is-acrylic-yarn-safe-for-babies-hero-480w.webp 480w, /img/heroes/is-acrylic-yarn-safe-for-babies-hero-800w.webp 800w, /img/heroes/is-acrylic-yarn-safe-for-babies-hero-1200w.webp 1200w, /img/heroes/is-acrylic-yarn-safe-for-babies-hero.webp 1672w" sizes="(max-width: 38rem) calc(100vw - 2rem), 35.5rem" loading="eager" fetchpriority="high" decoding="async"></figure>  <div class="ad-slot ad-top" id="hbagency_space_346236"></div>
+  <p class="lede"><strong>Yes. Acrylic yarn is safe for baby items and it is the most widely used fibre for them.</strong> It is hypoallergenic in the practical sense — it is not a protein fibre, so it does not provoke wool sensitivity — it is machine washable, and it does not shed the way some novelty fibres do.</p>
 <p>There are two genuine considerations, and neither is the one people usually raise. Here they are, along with the concerns that turn out not to hold up.</p>
 <h2>The two real considerations</h2>
 <h3>1. It does not breathe as well as cotton</h3>
@@ -219,6 +228,7 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 <p><strong>&ldquo;Acrylic is plastic against a baby&rsquo;s skin.&rdquo;</strong> Acrylic is a polymer, as are polyester, nylon and the viscose in most bamboo yarn. So is the fleece in almost every commercial baby blanket sold. If this concerns you, the consistent position is cotton or linen — not &ldquo;natural&rdquo; fibres generally, since bamboo viscose is more processed than acrylic is.</p>
 <p><strong>&ldquo;Acrylic causes allergies.&rdquo;</strong> Contact allergy to acrylic fibre is rare. Wool sensitivity is far more common, which is why acrylic is normally the recommendation <em>for</em> sensitive skin rather than against it. If a baby reacts to an acrylic item, the more likely culprits are the detergent or the dye, not the fibre.</p>
 <p><strong>&ldquo;Acrylic is too hot.&rdquo;</strong> It is warm but less warm than wool and much less warm than alpaca. It is not the warmest option on the shelf.</p>
+<div class="ad-slot ad-mid" id="hbagency_space_346237"></div>
 <h2>Acrylic against the alternatives</h2>
 <div class="tablewrap"><table>
 <thead>
@@ -304,8 +314,9 @@ Some does, more than cotton and less than chenille. Tightly spun and plied acryl
 Yes. It is the most common fibre in commercial newborn blankets for the same reasons it is a good choice here.</p>  <aside class="related">
     <h2>Keep reading</h2>
     <ul>      <li><a href="/best-yarn-for-baby-blankets/">The Best Yarn for Baby Blankets: Soft, Washable and Safe</a></li>      <li><a href="/how-to-wash-a-crochet-baby-blanket/">How to Wash a Crochet Baby Blanket Without Ruining It</a></li>      <li><a href="/yarn-weight-chart-for-baby-projects/">Yarn Weight Chart for Baby Projects (0–7, and What Each One Is Good For)</a></li>    </ul>
-  </aside></article>
-</main>
+  </aside></article><div id="hbagency_space_346234"></div>
+<div id="hbagency_space_346233"></div>
+<div id="hbagency_space_346235"></div></main>
 
 <footer class="site">
   <div class="wrap">

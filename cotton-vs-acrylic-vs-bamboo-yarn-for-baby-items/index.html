@@ -18,7 +18,8 @@
 
 <link rel="alternate" type="application/rss+xml" title="Crochet Baby Gifts" href="https://crochetbabygifts.com/rss.xml">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="/fonts/dmseriftext-latin.ttf" as="font" type="font/ttf" crossorigin><!-- Google Analytics 4 with Consent Mode v2. Ad storage is denied everywhere (no ads). Analytics cookies are denied
+<link rel="preload" href="/fonts/dmseriftext-latin.ttf" as="font" type="font/ttf" crossorigin><!-- Google Analytics 4 with Consent Mode v2. Ad storage is denied for the GA tag, which needs none (the HBAgency ads
+ask for consent through their own IAB TCF window). Analytics cookies are denied
 by default in the EEA, UK and Switzerland, where Google applies the region list by the visitor's IP, until the visitor
 accepts the consent bar at the foot of the page. A stored choice ("cbg-consent" in localStorage) wins everywhere. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6156532FH"></script>
@@ -30,7 +31,8 @@ region:['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','I
 (function(){var c=null;try{c=localStorage.getItem('cbg-consent');}catch(e){}if(c==='granted'||c==='denied'){gtag('consent','update',{analytics_storage:c});}})();
 gtag('js',new Date());
 gtag('config','G-E6156532FH',{allow_google_signals:false,allow_ad_personalization_signals:false});
-</script>
+</script><!-- HBAgency header bidding, article pages only (D9). It brings its own IAB TCF consent window for EU/UK visitors. -->
+<script defer src="https://d3u598arehftfk.cloudfront.net/prebid_hb_40090_44308.js"></script>
 <style>
 @font-face{font-family:"DM Serif Text";src:url("/fonts/dmseriftext-latin.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
 :root{
@@ -144,6 +146,12 @@ margin:0 0 .5rem;font-weight:700;color:var(--ink-soft)}
 .related ul{margin:0;padding-left:1.1rem}
 .related li{margin-bottom:.35rem}
 
+/* ad slots (HBAgency); min-height keeps the text from jumping when an ad loads */
+.ad-slot{display:block;text-align:center;margin:1.6rem auto;overflow:hidden}
+.ad-top{min-height:100px}
+.ad-mid{min-height:280px}
+@media (min-width:48rem){.ad-top{min-height:250px}}
+
 /* consent bar (Google Analytics) */
 .consent{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--oat);border-top:1px solid var(--linen);
 padding:.8rem 1rem;font-size:.9rem;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center}
@@ -203,7 +211,8 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
     <time datetime="2026-10-14">14 October 2026</time>
     <span class="dot">&middot;</span><span>4 min read</span>
   </p>
-  <h1>Cotton vs Acrylic vs Bamboo Yarn for Baby Items</h1>  <p class="lede"><strong>Acrylic for blankets. Cotton for anything worn in warm weather. Bamboo when you want drape and are willing to flat-dry it.</strong> Those three sentences cover almost every real decision. The rest of this page is the evidence, and the specific cases where the answer flips.</p>
+  <h1>Cotton vs Acrylic vs Bamboo Yarn for Baby Items</h1>  <div class="ad-slot ad-top" id="hbagency_space_346236"></div>
+  <p class="lede"><strong>Acrylic for blankets. Cotton for anything worn in warm weather. Bamboo when you want drape and are willing to flat-dry it.</strong> Those three sentences cover almost every real decision. The rest of this page is the evidence, and the specific cases where the answer flips.</p>
 <h2>Side by side</h2>
 <div class="tablewrap"><table>
 <thead>
@@ -308,6 +317,7 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 <p>Bamboo yarn is almost always bamboo viscose, which is a heavily processed fibre — worth knowing if &ldquo;natural&rdquo; is part of why you are choosing it. What it gives you is a genuinely beautiful silky drape and a cool, smooth hand that neither of the others matches.</p>
 <p>Its real cost is <strong>wet strength</strong>. Viscose is weak when wet, so bamboo items must be dried flat and handled gently while damp. For a newborn gift, that is a real ongoing imposition on the recipient.</p>
 <p><strong>Choose bamboo for:</strong> lightweight summer blankets, shawls, anything where drape is the point, and gifts for people you know will read a care label.</p>
+<div class="ad-slot ad-mid" id="hbagency_space_346237"></div>
 <h2>Which for which item</h2>
 <div class="tablewrap"><table>
 <thead>
@@ -383,8 +393,9 @@ Cotton. Crisp stitch definition, no halo, and a dense fabric that hides stuffing
 Only if the care requirements match and the weights are similar. Mixing a dryer-safe yarn with a flat-dry-only yarn produces an item that distorts on its first wash.</p>  <aside class="related">
     <h2>Keep reading</h2>
     <ul>      <li><a href="/best-yarn-for-baby-blankets/">The Best Yarn for Baby Blankets: Soft, Washable and Safe</a></li>      <li><a href="/is-acrylic-yarn-safe-for-babies/">Is Acrylic Yarn Safe for Babies? An Honest Answer</a></li>      <li><a href="/machine-washable-yarn-for-baby-gifts/">Machine-Washable Yarn for Baby Gifts: What to Look For</a></li>    </ul>
-  </aside></article>
-</main>
+  </aside></article><div id="hbagency_space_346234"></div>
+<div id="hbagency_space_346233"></div>
+<div id="hbagency_space_346235"></div></main>
 
 <footer class="site">
   <div class="wrap">

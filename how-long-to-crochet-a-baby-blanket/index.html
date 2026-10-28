@@ -18,7 +18,8 @@
 
 <link rel="alternate" type="application/rss+xml" title="Crochet Baby Gifts" href="https://crochetbabygifts.com/rss.xml">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="/fonts/dmseriftext-latin.ttf" as="font" type="font/ttf" crossorigin><!-- Google Analytics 4 with Consent Mode v2. Ad storage is denied everywhere (no ads). Analytics cookies are denied
+<link rel="preload" href="/fonts/dmseriftext-latin.ttf" as="font" type="font/ttf" crossorigin><!-- Google Analytics 4 with Consent Mode v2. Ad storage is denied for the GA tag, which needs none (the HBAgency ads
+ask for consent through their own IAB TCF window). Analytics cookies are denied
 by default in the EEA, UK and Switzerland, where Google applies the region list by the visitor's IP, until the visitor
 accepts the consent bar at the foot of the page. A stored choice ("cbg-consent" in localStorage) wins everywhere. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6156532FH"></script>
@@ -30,7 +31,8 @@ region:['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','I
 (function(){var c=null;try{c=localStorage.getItem('cbg-consent');}catch(e){}if(c==='granted'||c==='denied'){gtag('consent','update',{analytics_storage:c});}})();
 gtag('js',new Date());
 gtag('config','G-E6156532FH',{allow_google_signals:false,allow_ad_personalization_signals:false});
-</script>
+</script><!-- HBAgency header bidding, article pages only (D9). It brings its own IAB TCF consent window for EU/UK visitors. -->
+<script defer src="https://d3u598arehftfk.cloudfront.net/prebid_hb_40090_44308.js"></script>
 <style>
 @font-face{font-family:"DM Serif Text";src:url("/fonts/dmseriftext-latin.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
 :root{
@@ -144,6 +146,12 @@ margin:0 0 .5rem;font-weight:700;color:var(--ink-soft)}
 .related ul{margin:0;padding-left:1.1rem}
 .related li{margin-bottom:.35rem}
 
+/* ad slots (HBAgency); min-height keeps the text from jumping when an ad loads */
+.ad-slot{display:block;text-align:center;margin:1.6rem auto;overflow:hidden}
+.ad-top{min-height:100px}
+.ad-mid{min-height:280px}
+@media (min-width:48rem){.ad-top{min-height:250px}}
+
 /* consent bar (Google Analytics) */
 .consent{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--oat);border-top:1px solid var(--linen);
 padding:.8rem 1rem;font-size:.9rem;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center}
@@ -203,7 +211,8 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
     <time datetime="2026-10-24">24 October 2026</time>
     <span class="dot">&middot;</span><span>5 min read</span>
   </p>
-  <h1>How Long Does It Take to Crochet a Baby Blanket?</h1>  <p class="lede"><strong>A 30 × 35 inch stroller blanket in worsted yarn and double crochet takes most people 18 to 30 hours.</strong> At an hour a day that is three to four weeks. At a couple of evenings a week it is two months.</p>
+  <h1>How Long Does It Take to Crochet a Baby Blanket?</h1>  <div class="ad-slot ad-top" id="hbagency_space_346236"></div>
+  <p class="lede"><strong>A 30 × 35 inch stroller blanket in worsted yarn and double crochet takes most people 18 to 30 hours.</strong> At an hour a day that is three to four weeks. At a couple of evenings a week it is two months.</p>
 <p>The range is wide because speed varies enormously between people, and anyone quoting a single number is describing themselves. Below is the table, and then a ten-minute method to replace it with your own figure.</p>
 <h2>Estimated hours by size</h2>
 <p>Worsted weight (4), double crochet, a moderate pace.</p>
@@ -337,6 +346,7 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 </table></div>
 <p><strong>Worked example.</strong> A 30 × 35 blanket in single crochet in DK: 24 hours (baseline) × 1.8 (single crochet) × 1.4 (DK) = <strong>about 60 hours.</strong> The same blanket in bulky double crochet is about 14. Identical dimensions, four times the work.</p>
 <p>That factor of four is why &ldquo;how long does a baby blanket take&rdquo; has no single answer, and it is entirely within your control before you start.</p>
+<div class="ad-slot ad-mid" id="hbagency_space_346237"></div>
 <h2>Work out your own speed in ten minutes</h2>
 <p>Better than any table on the internet, including this one.</p>
 <ol>
@@ -408,8 +418,9 @@ An hour is sustainable for most people. Beyond about two hours in a sitting, han
 Crochet, generally — taller stitches cover ground faster. See <a href="/crochet-or-knit-for-baby-gifts/">crochet or knit</a>.</p>  <aside class="related">
     <h2>Keep reading</h2>
     <ul>      <li><a href="/crochet-baby-blanket-size-chart/">Crochet Baby Blanket Size Chart: Every Size, Newborn to Toddler</a></li>      <li><a href="/how-much-yarn-for-a-baby-blanket/">How Much Yarn for a Baby Blanket? Yardage by Size and Yarn Weight</a></li>      <li><a href="/crochet-or-knit-for-baby-gifts/">Crochet or Knit for Baby Gifts? How to Choose</a></li>    </ul>
-  </aside></article>
-</main>
+  </aside></article><div id="hbagency_space_346234"></div>
+<div id="hbagency_space_346233"></div>
+<div id="hbagency_space_346235"></div></main>
 
 <footer class="site">
   <div class="wrap">

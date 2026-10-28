@@ -18,7 +18,8 @@
 
 <link rel="alternate" type="application/rss+xml" title="Crochet Baby Gifts" href="https://crochetbabygifts.com/rss.xml">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="/fonts/dmseriftext-latin.ttf" as="font" type="font/ttf" crossorigin><!-- Google Analytics 4 with Consent Mode v2. Ad storage is denied everywhere (no ads). Analytics cookies are denied
+<link rel="preload" href="/fonts/dmseriftext-latin.ttf" as="font" type="font/ttf" crossorigin><!-- Google Analytics 4 with Consent Mode v2. Ad storage is denied for the GA tag, which needs none (the HBAgency ads
+ask for consent through their own IAB TCF window). Analytics cookies are denied
 by default in the EEA, UK and Switzerland, where Google applies the region list by the visitor's IP, until the visitor
 accepts the consent bar at the foot of the page. A stored choice ("cbg-consent" in localStorage) wins everywhere. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6156532FH"></script>
@@ -144,6 +145,12 @@ margin:0 0 .5rem;font-weight:700;color:var(--ink-soft)}
 .related ul{margin:0;padding-left:1.1rem}
 .related li{margin-bottom:.35rem}
 
+/* ad slots (HBAgency); min-height keeps the text from jumping when an ad loads */
+.ad-slot{display:block;text-align:center;margin:1.6rem auto;overflow:hidden}
+.ad-top{min-height:100px}
+.ad-mid{min-height:280px}
+@media (min-width:48rem){.ad-top{min-height:250px}}
+
 /* consent bar (Google Analytics) */
 .consent{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--oat);border-top:1px solid var(--linen);
 padding:.8rem 1rem;font-size:.9rem;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center}
@@ -199,9 +206,9 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 <main id="main">
 <article class="wrap">
   <h1 style="margin-top:2.4rem">Privacy Policy</h1>
-  <p>Last updated 26 October 2026.</p>
+  <p>Last updated 28 October 2026.</p>
 <h2>The short version</h2>
-<p>This site is static HTML. It has <strong>no advertising and no login.</strong> It counts visits two ways: with Cloudflare Web Analytics, which sets no cookies, and with Google Analytics, which does set cookies. <strong>In the EU, the UK and Switzerland, Google Analytics cookies stay off unless you accept them.</strong> You can change your choice at any time: <a href="#cookies">change your cookie choice</a>.</p>
+<p>This site is static HTML with <strong>no login.</strong> Since 28 October 2026 its articles <strong>carry advertising</strong>, run by HBAgency (details below). It counts visits two ways: with Cloudflare Web Analytics, which sets no cookies, and with Google Analytics, which does set cookies. <strong>In the EU, the UK and Switzerland, Google Analytics cookies stay off unless you accept them.</strong> You can change your choice at any time: <a href="#cookies">change your cookie choice</a>.</p>
 <h2>What that means in detail</h2>
 <p><span id="cookies"></span><strong>Cookies.</strong> The site itself sets none. Google Analytics sets two first-party cookies, <code>_ga</code> and <code>_ga_E6156532FH</code>, so it can tell a returning visitor from a new one. Google&rsquo;s default lifetime for them is up to two years. If you are in the EU, the UK or Switzerland, they are only set after you press Accept on the bar at the foot of the page; until then Google Analytics receives visits without cookies. Elsewhere they are on by default, and you can turn them off. Your choice is kept in your own browser&rsquo;s local storage, not in a cookie, and you can <a href="#" onclick="return cbgConsentReset()">change your cookie choice</a> here at any time. Google also offers a browser add-on that blocks Google Analytics on every site: search for &ldquo;Google Analytics Opt-out Browser Add-on&rdquo;.</p>
 <p><strong>Analytics.</strong> Two tools.</p>
@@ -210,8 +217,8 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 <li><strong>Google Analytics 4</strong>, added 26 October 2026. It records the pages you view, the site that sent you, your approximate location (country and city), your device and browser, and some actions on the page: scrolling, clicking a link to another site, and downloading a PDF. Google states that Google Analytics 4 does not log or store IP addresses. We have turned off Google signals, ad personalisation and every optional data-sharing setting. Google keeps the detailed records for two months, its default. Google acts as our data processor under its data processing terms, and Google&rsquo;s own privacy policy applies to how it runs the service.</li>
 </ul>
 <p>We look at totals and trends, not at individuals, and we do not combine this data with anything else.</p>
-<p><strong>Advertising.</strong> None at present. If advertising is added in future, this page will be updated <strong>before</strong> any ad code goes live, and it will name the ad provider and say what data that provider collects. Advertising networks generally do set cookies and process data for personalised ads; when that applies here, it will be described here.</p>
-<p><strong>Third-party requests.</strong> The pages load one font file from this same domain. The requests to other servers are the analytics scripts: Cloudflare&rsquo;s (static.cloudflareinsights.com) and Google&rsquo;s (www.googletagmanager.com, reporting to google-analytics.com), which report the visit as described above. No font CDN, no ad server, no image host. One tutorial page shows a YouTube video, and it loads nothing from YouTube until you press its play button. Once you press play, the video comes from YouTube&rsquo;s privacy-enhanced player (youtube-nocookie.com) and YouTube&rsquo;s own privacy policy applies to that video.</p>
+<p><strong>Advertising.</strong> Article pages show ads managed by <strong>HBAgency</strong>, an advertising company based in Sardinia, Italy (hbagency.it, info@hbagency.it). Its script runs a quick auction among advertising partners for each ad space on the page. The partners named in that script today are Adagio, Adform, AMX, Adyoulike, Improve Digital, Kueez, Monetix Ads, OneTag and TripleLift, with Google Ad Manager serving the winning ad; HBAgency&rsquo;s ads.txt file on this site lists every company authorised to sell its ad space. These companies may set cookies and use identifiers (for example ID5) to measure ads, limit how often you see them, prevent fraud and, where you allow it, show ads based on your interests. <strong>In the EU, the UK and Switzerland, an IAB consent window from HBAgency asks you first</strong>, and you can refuse or change your choice there. HBAgency&rsquo;s own privacy policy, on hbagency.it, describes what it collects. The other pages of this site (home, about, contact, this page) carry no ads.</p>
+<p><strong>Third-party requests.</strong> The pages load one font file from this same domain. The requests to other servers are the analytics scripts: Cloudflare&rsquo;s (static.cloudflareinsights.com) and Google&rsquo;s (www.googletagmanager.com, reporting to google-analytics.com), which report the visit as described above. On article pages, the advertising script also loads from HBAgency (a CloudFront address and hbagency.it), and it calls its advertising partners and Google&rsquo;s ad server (securepubads.g.doubleclick.net). No font CDN, no image host. One tutorial page shows a YouTube video, and it loads nothing from YouTube until you press its play button. Once you press play, the video comes from YouTube&rsquo;s privacy-enhanced player (youtube-nocookie.com) and YouTube&rsquo;s own privacy policy applies to that video.</p>
 <p><strong>Server logs.</strong> The site is served by Cloudflare, which, like all hosting providers, records ordinary technical request data such as IP address, user agent and the URL requested. This is standard operational logging, not something this site reads or analyses.</p>
 <p><strong>Email.</strong> If you email us, we have your email and whatever you wrote, for as long as needed to reply and keep a record of corrections. It is not added to any list, because there is no list.</p>
 <p><strong>Children.</strong> This site is written for adults buying or making gifts for babies. It is not directed at children and collects nothing from anyone.</p>

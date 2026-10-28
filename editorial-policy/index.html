@@ -18,7 +18,8 @@
 
 <link rel="alternate" type="application/rss+xml" title="Crochet Baby Gifts" href="https://crochetbabygifts.com/rss.xml">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="/fonts/dmseriftext-latin.ttf" as="font" type="font/ttf" crossorigin><!-- Google Analytics 4 with Consent Mode v2. Ad storage is denied everywhere (no ads). Analytics cookies are denied
+<link rel="preload" href="/fonts/dmseriftext-latin.ttf" as="font" type="font/ttf" crossorigin><!-- Google Analytics 4 with Consent Mode v2. Ad storage is denied for the GA tag, which needs none (the HBAgency ads
+ask for consent through their own IAB TCF window). Analytics cookies are denied
 by default in the EEA, UK and Switzerland, where Google applies the region list by the visitor's IP, until the visitor
 accepts the consent bar at the foot of the page. A stored choice ("cbg-consent" in localStorage) wins everywhere. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6156532FH"></script>
@@ -144,6 +145,12 @@ margin:0 0 .5rem;font-weight:700;color:var(--ink-soft)}
 .related ul{margin:0;padding-left:1.1rem}
 .related li{margin-bottom:.35rem}
 
+/* ad slots (HBAgency); min-height keeps the text from jumping when an ad loads */
+.ad-slot{display:block;text-align:center;margin:1.6rem auto;overflow:hidden}
+.ad-top{min-height:100px}
+.ad-mid{min-height:280px}
+@media (min-width:48rem){.ad-top{min-height:250px}}
+
 /* consent bar (Google Analytics) */
 .consent{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--oat);border-top:1px solid var(--linen);
 padding:.8rem 1rem;font-size:.9rem;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center}
@@ -211,7 +218,7 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 <h2>Corrections</h2>
 <p>If something here is wrong, tell us and it gets fixed, with the page noting that it changed. See <a href="/contact/">contact</a>. We would rather be corrected than be confidently wrong in a search result for years.</p>
 <h2>Affiliate links and advertising</h2>
-<p>This site carries <strong>Amazon affiliate links</strong> in some materials lists. As an Amazon Associate I earn from qualifying purchases, at no extra cost to you, and the links are marked where they appear. It carries <strong>no advertising and no sponsored content</strong>. If that changes, this page will say so before it happens.</p>
+<p>This site carries <strong>Amazon affiliate links</strong> in some materials lists. As an Amazon Associate I earn from qualifying purchases, at no extra cost to you, and the links are marked where they appear. Since 28 October 2026 its articles also carry <strong>advertising</strong>, managed by HBAgency and described on the <a href="/privacy/">privacy page</a>. Ads never decide what we write or recommend, and it carries <strong>no sponsored content</strong>. If that changes, this page will say so before it does.</p>
 </article>
 </main>
 

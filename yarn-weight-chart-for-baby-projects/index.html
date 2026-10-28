@@ -18,7 +18,8 @@
 
 <link rel="alternate" type="application/rss+xml" title="Crochet Baby Gifts" href="https://crochetbabygifts.com/rss.xml">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="/fonts/dmseriftext-latin.ttf" as="font" type="font/ttf" crossorigin><!-- Google Analytics 4 with Consent Mode v2. Ad storage is denied everywhere (no ads). Analytics cookies are denied
+<link rel="preload" href="/fonts/dmseriftext-latin.ttf" as="font" type="font/ttf" crossorigin><!-- Google Analytics 4 with Consent Mode v2. Ad storage is denied for the GA tag, which needs none (the HBAgency ads
+ask for consent through their own IAB TCF window). Analytics cookies are denied
 by default in the EEA, UK and Switzerland, where Google applies the region list by the visitor's IP, until the visitor
 accepts the consent bar at the foot of the page. A stored choice ("cbg-consent" in localStorage) wins everywhere. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6156532FH"></script>
@@ -30,7 +31,8 @@ region:['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','I
 (function(){var c=null;try{c=localStorage.getItem('cbg-consent');}catch(e){}if(c==='granted'||c==='denied'){gtag('consent','update',{analytics_storage:c});}})();
 gtag('js',new Date());
 gtag('config','G-E6156532FH',{allow_google_signals:false,allow_ad_personalization_signals:false});
-</script>
+</script><!-- HBAgency header bidding, article pages only (D9). It brings its own IAB TCF consent window for EU/UK visitors. -->
+<script defer src="https://d3u598arehftfk.cloudfront.net/prebid_hb_40090_44308.js"></script>
 <style>
 @font-face{font-family:"DM Serif Text";src:url("/fonts/dmseriftext-latin.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
 :root{
@@ -144,6 +146,12 @@ margin:0 0 .5rem;font-weight:700;color:var(--ink-soft)}
 .related ul{margin:0;padding-left:1.1rem}
 .related li{margin-bottom:.35rem}
 
+/* ad slots (HBAgency); min-height keeps the text from jumping when an ad loads */
+.ad-slot{display:block;text-align:center;margin:1.6rem auto;overflow:hidden}
+.ad-top{min-height:100px}
+.ad-mid{min-height:280px}
+@media (min-width:48rem){.ad-top{min-height:250px}}
+
 /* consent bar (Google Analytics) */
 .consent{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--oat);border-top:1px solid var(--linen);
 padding:.8rem 1rem;font-size:.9rem;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center}
@@ -203,7 +211,8 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
     <time datetime="2026-07-30">30 July 2026</time>
     <span class="dot">&middot;</span><span>4 min read</span>
   </p>
-  <h1>Yarn Weight Chart for Baby Projects (0–7, and What Each One Is Good For)</h1>  <figure class="fig hero"><img src="/img/heroes/yarn-weight-chart-for-baby-projects-hero.webp" width="1672" height="941" alt="Yarn skeins in different thicknesses with loose strands on cream linen." srcset="/img/heroes/yarn-weight-chart-for-baby-projects-hero-480w.webp 480w, /img/heroes/yarn-weight-chart-for-baby-projects-hero-800w.webp 800w, /img/heroes/yarn-weight-chart-for-baby-projects-hero-1200w.webp 1200w, /img/heroes/yarn-weight-chart-for-baby-projects-hero.webp 1672w" sizes="(max-width: 38rem) calc(100vw - 2rem), 35.5rem" loading="eager" fetchpriority="high" decoding="async"></figure>  <p class="lede"><strong>For most baby projects you want weight 3 (DK) or weight 4 (worsted).</strong> Weight 3 for anything worn — hats, booties, cardigans. Weight 4 for blankets. Everything else has a use, but those two cover the great majority of baby gifts.</p>
+  <h1>Yarn Weight Chart for Baby Projects (0–7, and What Each One Is Good For)</h1>  <figure class="fig hero"><img src="/img/heroes/yarn-weight-chart-for-baby-projects-hero.webp" width="1672" height="941" alt="Yarn skeins in different thicknesses with loose strands on cream linen." srcset="/img/heroes/yarn-weight-chart-for-baby-projects-hero-480w.webp 480w, /img/heroes/yarn-weight-chart-for-baby-projects-hero-800w.webp 800w, /img/heroes/yarn-weight-chart-for-baby-projects-hero-1200w.webp 1200w, /img/heroes/yarn-weight-chart-for-baby-projects-hero.webp 1672w" sizes="(max-width: 38rem) calc(100vw - 2rem), 35.5rem" loading="eager" fetchpriority="high" decoding="async"></figure>  <div class="ad-slot ad-top" id="hbagency_space_346236"></div>
+  <p class="lede"><strong>For most baby projects you want weight 3 (DK) or weight 4 (worsted).</strong> Weight 3 for anything worn — hats, booties, cardigans. Weight 4 for blankets. Everything else has a use, but those two cover the great majority of baby gifts.</p>
 <p>Here is the whole system, and then the part that matters: which weight to pick for what.</p>
 <h2>The standard yarn weight chart</h2>
 <p>The numbers 0–7 come from the Craft Yarn Council&rsquo;s Standard Yarn Weight System, which is the one thing in this hobby that genuinely is standardised. The symbol on a yarn label is a ball of yarn with the number inside it.</p>
@@ -343,6 +352,7 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 <h3>Two warnings the charts don&rsquo;t give you</h3>
 <p><strong>Do not use weight 6 or 7 for anything a baby sleeps near.</strong> Super bulky and jumbo blankets have gaps between stitches large enough for a small hand or foot to go through, and they are heavy. They photograph beautifully. That is their whole appeal, and it is not a good reason.</p>
 <p><strong>Do not use weight 4 for baby clothes.</strong> It is the right answer for blankets and the wrong answer for cardigans. A worsted-weight baby cardigan comes out thick, stiff and about a third heavier than the child wants to wear.</p>
+<div class="ad-slot ad-mid" id="hbagency_space_346237"></div>
 <h2>Substituting one weight for another</h2>
 <p>You can, within one step, if you adjust. Going from weight 4 to weight 3 with the same instructions gives you a finished item roughly <strong>10–15% smaller</strong>. Going the other way makes it that much bigger.</p>
 <p>The way to substitute properly:</p>
@@ -370,8 +380,9 @@ Yes. Two strands of DK approximates a weight 5 bulky reasonably well. Two strand
 Weight 5 bulky is a good balance of speed and safety. Weight 6 and 7 are faster still but produce gaps and weight you don&rsquo;t want on a baby item.</p>  <aside class="related">
     <h2>Keep reading</h2>
     <ul>      <li><a href="/crochet-hook-size-chart/">Crochet Hook Size Chart: US, UK and Metric Conversions</a></li>      <li><a href="/how-much-yarn-for-a-baby-blanket/">How Much Yarn for a Baby Blanket? Yardage by Size and Yarn Weight</a></li>      <li><a href="/best-yarn-for-baby-blankets/">The Best Yarn for Baby Blankets: Soft, Washable and Safe</a></li>    </ul>
-  </aside></article>
-</main>
+  </aside></article><div id="hbagency_space_346234"></div>
+<div id="hbagency_space_346233"></div>
+<div id="hbagency_space_346235"></div></main>
 
 <footer class="site">
   <div class="wrap">

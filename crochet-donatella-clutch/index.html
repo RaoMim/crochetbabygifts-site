@@ -18,7 +18,8 @@
 
 <link rel="alternate" type="application/rss+xml" title="Crochet Baby Gifts" href="https://crochetbabygifts.com/rss.xml">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="/fonts/dmseriftext-latin.ttf" as="font" type="font/ttf" crossorigin><!-- Google Analytics 4 with Consent Mode v2. Ad storage is denied everywhere (no ads). Analytics cookies are denied
+<link rel="preload" href="/fonts/dmseriftext-latin.ttf" as="font" type="font/ttf" crossorigin><!-- Google Analytics 4 with Consent Mode v2. Ad storage is denied for the GA tag, which needs none (the HBAgency ads
+ask for consent through their own IAB TCF window). Analytics cookies are denied
 by default in the EEA, UK and Switzerland, where Google applies the region list by the visitor's IP, until the visitor
 accepts the consent bar at the foot of the page. A stored choice ("cbg-consent" in localStorage) wins everywhere. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6156532FH"></script>
@@ -30,7 +31,8 @@ region:['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','I
 (function(){var c=null;try{c=localStorage.getItem('cbg-consent');}catch(e){}if(c==='granted'||c==='denied'){gtag('consent','update',{analytics_storage:c});}})();
 gtag('js',new Date());
 gtag('config','G-E6156532FH',{allow_google_signals:false,allow_ad_personalization_signals:false});
-</script>
+</script><!-- HBAgency header bidding, article pages only (D9). It brings its own IAB TCF consent window for EU/UK visitors. -->
+<script defer src="https://d3u598arehftfk.cloudfront.net/prebid_hb_40090_44308.js"></script>
 <style>
 @font-face{font-family:"DM Serif Text";src:url("/fonts/dmseriftext-latin.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
 :root{
@@ -144,6 +146,12 @@ margin:0 0 .5rem;font-weight:700;color:var(--ink-soft)}
 .related ul{margin:0;padding-left:1.1rem}
 .related li{margin-bottom:.35rem}
 
+/* ad slots (HBAgency); min-height keeps the text from jumping when an ad loads */
+.ad-slot{display:block;text-align:center;margin:1.6rem auto;overflow:hidden}
+.ad-top{min-height:100px}
+.ad-mid{min-height:280px}
+@media (min-width:48rem){.ad-top{min-height:250px}}
+
 /* consent bar (Google Analytics) */
 .consent{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--oat);border-top:1px solid var(--linen);
 padding:.8rem 1rem;font-size:.9rem;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center}
@@ -203,7 +211,8 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
     <time datetime="2026-10-09">9 October 2026</time>
     <span class="dot">&middot;</span><span>8 min read</span>
   </p>
-  <h1>How to Crochet the Donatella Clutch: A Beginner-Friendly Tutorial</h1>  <figure class="fig hero"><img src="/img/heroes/crochet-donatella-clutch-hero.webp" width="1672" height="941" alt="Terracotta ribbon yarn, a reverse-side crochet swatch, large hook and yarn needle on a cream tabletop." srcset="/img/heroes/crochet-donatella-clutch-hero-480w.webp 480w, /img/heroes/crochet-donatella-clutch-hero-800w.webp 800w, /img/heroes/crochet-donatella-clutch-hero-1200w.webp 1200w, /img/heroes/crochet-donatella-clutch-hero.webp 1672w" sizes="(max-width: 38rem) calc(100vw - 2rem), 35.5rem" loading="eager" fetchpriority="high" decoding="async"></figure>  <p class="lede">Make a chunky crochet clutch with an oval base and a covered spring closure. This guide follows Katy Handmade&rsquo;s <strong>Donatella</strong> video below. The sample in the video uses magenta Lycra ribbon yarn; any color works, like the terracotta pictured above.</p>
+  <h1>How to Crochet the Donatella Clutch: A Beginner-Friendly Tutorial</h1>  <figure class="fig hero"><img src="/img/heroes/crochet-donatella-clutch-hero.webp" width="1672" height="941" alt="Terracotta ribbon yarn, a reverse-side crochet swatch, large hook and yarn needle on a cream tabletop." srcset="/img/heroes/crochet-donatella-clutch-hero-480w.webp 480w, /img/heroes/crochet-donatella-clutch-hero-800w.webp 800w, /img/heroes/crochet-donatella-clutch-hero-1200w.webp 1200w, /img/heroes/crochet-donatella-clutch-hero.webp 1672w" sizes="(max-width: 38rem) calc(100vw - 2rem), 35.5rem" loading="eager" fetchpriority="high" decoding="async"></figure>  <div class="ad-slot ad-top" id="hbagency_space_346236"></div>
+  <p class="lede">Make a chunky crochet clutch with an oval base and a covered spring closure. This guide follows Katy Handmade&rsquo;s <strong>Donatella</strong> video below. The sample in the video uses magenta Lycra ribbon yarn; any color works, like the terracotta pictured above.</p>
 <p>We have not made this clutch ourselves yet. The steps and measurements follow the video.</p>
 <p><strong>Free printable PDF pattern:</strong> <a href="/pdf/crochet-donatella-clutch-en.pdf">English</a> · <a href="/pdf/crochet-donatella-clutch-fr.pdf">Français</a> · <a href="/pdf/crochet-donatella-clutch-de.pdf">Deutsch</a> · <a href="/pdf/crochet-donatella-clutch-es.pdf">Español</a> · <a href="/pdf/crochet-donatella-clutch-it.pdf">Italiano</a>. The whole pattern rewritten from the video, 12 pages with stitch-count diagrams and fit checkpoints. No sign-up.</p>
 <h2>Watch the tutorial</h2>
@@ -231,6 +240,7 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 </ul>
 <p>The sample starts with a chain measuring <strong>16 cm</strong>, has a base approximately <strong>26 × 11 cm</strong>, and reaches approximately <strong>14 cm in height</strong> after seven body rounds. These are the creator&rsquo;s sample measurements, not guaranteed results with every yarn or tension.</p>
 <p><strong>Terms used here:</strong> US single crochet (sc); an <strong>increase</strong> means two single crochets in one stitch; a <strong>slip stitch</strong> joins a round without adding height. A <strong>spiral</strong> means continuing into the next round without joining.</p>
+<div class="ad-slot ad-mid" id="hbagency_space_346237"></div>
 <h2>1. Prepare the yarn and make the starting chain</h2>
 <p><strong>Video: 1:53–2:50</strong></p>
 <p>Gently stretch the Lycra ribbon so its edges curl into a tube. Make <strong>13 chains</strong> for the sample, aiming for <strong>16 cm</strong>, the internal measurement used for the tutorial&rsquo;s closure.</p>
@@ -274,8 +284,9 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 <p><em>Tutorial credit: Katy Handmade, <a href="https://www.youtube.com/watch?v=aE_E1EuoGto">&ldquo;Donatella&rdquo; crochet clutch</a>. Written by crochetbabygifts from the linked video; crochet terms are presented in US English.</em></p>  <aside class="related">
     <h2>Keep reading</h2>
     <ul>      <li><a href="/crochet-tshirt-yarn-clutch/">Crochet T-Shirt Yarn Clutch Pattern: A Free Waistcoat-Stitch Clutch Built Around a 22 cm Snap Frame</a></li>      <li><a href="/crochet-hook-size-chart/">Crochet Hook Size Chart: US, UK and Metric Conversions</a></li>    </ul>
-  </aside></article>
-</main>
+  </aside></article><div id="hbagency_space_346234"></div>
+<div id="hbagency_space_346233"></div>
+<div id="hbagency_space_346235"></div></main>
 
 <footer class="site">
   <div class="wrap">

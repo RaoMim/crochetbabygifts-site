@@ -18,7 +18,8 @@
 
 <link rel="alternate" type="application/rss+xml" title="Crochet Baby Gifts" href="https://crochetbabygifts.com/rss.xml">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="/fonts/dmseriftext-latin.ttf" as="font" type="font/ttf" crossorigin><!-- Google Analytics 4 with Consent Mode v2. Ad storage is denied everywhere (no ads). Analytics cookies are denied
+<link rel="preload" href="/fonts/dmseriftext-latin.ttf" as="font" type="font/ttf" crossorigin><!-- Google Analytics 4 with Consent Mode v2. Ad storage is denied for the GA tag, which needs none (the HBAgency ads
+ask for consent through their own IAB TCF window). Analytics cookies are denied
 by default in the EEA, UK and Switzerland, where Google applies the region list by the visitor's IP, until the visitor
 accepts the consent bar at the foot of the page. A stored choice ("cbg-consent" in localStorage) wins everywhere. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6156532FH"></script>
@@ -30,7 +31,8 @@ region:['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','I
 (function(){var c=null;try{c=localStorage.getItem('cbg-consent');}catch(e){}if(c==='granted'||c==='denied'){gtag('consent','update',{analytics_storage:c});}})();
 gtag('js',new Date());
 gtag('config','G-E6156532FH',{allow_google_signals:false,allow_ad_personalization_signals:false});
-</script>
+</script><!-- HBAgency header bidding, article pages only (D9). It brings its own IAB TCF consent window for EU/UK visitors. -->
+<script defer src="https://d3u598arehftfk.cloudfront.net/prebid_hb_40090_44308.js"></script>
 <style>
 @font-face{font-family:"DM Serif Text";src:url("/fonts/dmseriftext-latin.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
 :root{
@@ -144,6 +146,12 @@ margin:0 0 .5rem;font-weight:700;color:var(--ink-soft)}
 .related ul{margin:0;padding-left:1.1rem}
 .related li{margin-bottom:.35rem}
 
+/* ad slots (HBAgency); min-height keeps the text from jumping when an ad loads */
+.ad-slot{display:block;text-align:center;margin:1.6rem auto;overflow:hidden}
+.ad-top{min-height:100px}
+.ad-mid{min-height:280px}
+@media (min-width:48rem){.ad-top{min-height:250px}}
+
 /* consent bar (Google Analytics) */
 .consent{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--oat);border-top:1px solid var(--linen);
 padding:.8rem 1rem;font-size:.9rem;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center}
@@ -203,7 +211,8 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
     <time datetime="2026-10-10">10 October 2026</time>
     <span class="dot">&middot;</span><span>7 min read</span>
   </p>
-  <h1>Baby Blanket Color Combinations: Palettes That Work and How to Choose</h1>  <figure class="fig hero"><img src="/img/heroes/baby-blanket-color-combinations-hero.webp" width="1672" height="941" alt="Folded sage, cream and tan striped crochet blanket beside matching yarn balls." srcset="/img/heroes/baby-blanket-color-combinations-hero-480w.webp 480w, /img/heroes/baby-blanket-color-combinations-hero-800w.webp 800w, /img/heroes/baby-blanket-color-combinations-hero-1200w.webp 1200w, /img/heroes/baby-blanket-color-combinations-hero.webp 1672w" sizes="(max-width: 38rem) calc(100vw - 2rem), 35.5rem" loading="eager" fetchpriority="high" decoding="async"></figure>  <p class="lede"><strong>A baby blanket palette that works is usually two or three colours: a light neutral such as cream or white, one main colour, and sometimes a darker shade of the same family.</strong> Cream, beige and taupe is the safe gift when you know nothing about the nursery. Sage or dusty blue on cream suits a baby whose sex is a surprise.</p>
+  <h1>Baby Blanket Color Combinations: Palettes That Work and How to Choose</h1>  <figure class="fig hero"><img src="/img/heroes/baby-blanket-color-combinations-hero.webp" width="1672" height="941" alt="Folded sage, cream and tan striped crochet blanket beside matching yarn balls." srcset="/img/heroes/baby-blanket-color-combinations-hero-480w.webp 480w, /img/heroes/baby-blanket-color-combinations-hero-800w.webp 800w, /img/heroes/baby-blanket-color-combinations-hero-1200w.webp 1200w, /img/heroes/baby-blanket-color-combinations-hero.webp 1672w" sizes="(max-width: 38rem) calc(100vw - 2rem), 35.5rem" loading="eager" fetchpriority="high" decoding="async"></figure>  <div class="ad-slot ad-top" id="hbagency_space_346236"></div>
+  <p class="lede"><strong>A baby blanket palette that works is usually two or three colours: a light neutral such as cream or white, one main colour, and sometimes a darker shade of the same family.</strong> Cream, beige and taupe is the safe gift when you know nothing about the nursery. Sage or dusty blue on cream suits a baby whose sex is a surprise.</p>
 <p>Two quick checks, skipped by most colour guides, come before you buy: will the stripes still show, and will the strongest colour bleed into the cream?</p>
 <figure class="fig" id="fig-baby-blanket-color-palettes"><img src="/img/baby-blanket-color-combinations/baby-blanket-color-palettes-pin.jpg" width="608" height="912" alt="Nine folded striped crochet baby blankets, each shown with its colour swatches: cream, beige and taupe; rose, blush and cream; sage, cream and tan; blue, cream and grey; lavender, lilac and white; coral, peach and cream; mustard, butter yellow and cream; dusty blue, sage and cream; and pink, mint, lavender, butter yellow and cream." loading="lazy" decoding="async"><figcaption>Swatch colours are on-screen; real yarn will vary.</figcaption></figure>
 
@@ -295,6 +304,7 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 <p>In Modern Unisex, the dusty blue and the sage are close in lightness. A cream row between them keeps both stripes visible.</p>
 <figure class="fig" id="fig-palette-modern-unisex" style="max-width:300px;margin:1.75rem auto"><img src="/img/baby-blanket-color-combinations/8-modern-unisex.jpg" width="299" height="202" alt="Modern Unisex palette: a folded striped crochet baby blanket in dusty blue, sage and cream." loading="lazy" decoding="async"></figure>
 
+<div class="ad-slot ad-mid" id="hbagency_space_346237"></div>
 <h2>Are pink, blue and lavender still the default?</h2>
 <p>Soft Pink, Baby Blue and Lavender follow the US convention of pink for girls and blue for boys. It is still strong: in a 2022 YouGov poll of 1,000 US adults, blue topped the list for a boy&rsquo;s nursery and pink for a girl&rsquo;s. But it is a convention, not a rule. Smithsonian Magazine, drawing on the historian Jo Paoletti, reports that a 1918 trade publication gave the accepted rule as pink for boys and blue for girls, and that today&rsquo;s version did not settle until the 1940s.</p>
 <figure class="fig" id="fig-palette-soft-pink" style="max-width:300px;margin:1.75rem auto"><img src="/img/baby-blanket-color-combinations/2-soft-pink.jpg" width="299" height="192" alt="Soft Pink palette: a folded striped crochet baby blanket in rose, blush pink and cream." loading="lazy" decoding="async"></figure>
@@ -349,8 +359,9 @@ Two or three for most patterns, fewer for heavily textured stitches. Every extra
 It can. Reds and other saturated colours are the usual suspects, and no brand is guaranteed, so soak-test first.</p>  <aside class="related">
     <h2>Keep reading</h2>
     <ul>      <li><a href="/how-to-wash-a-crochet-baby-blanket/">How to Wash a Crochet Baby Blanket Without Ruining It</a></li>      <li><a href="/how-much-yarn-for-a-baby-blanket/">How Much Yarn for a Baby Blanket? Yardage by Size and Yarn Weight</a></li>      <li><a href="/best-yarn-for-baby-blankets/">The Best Yarn for Baby Blankets: Soft, Washable and Safe</a></li>    </ul>
-  </aside></article>
-</main>
+  </aside></article><div id="hbagency_space_346234"></div>
+<div id="hbagency_space_346233"></div>
+<div id="hbagency_space_346235"></div></main>
 
 <footer class="site">
   <div class="wrap">

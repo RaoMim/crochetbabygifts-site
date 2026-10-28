@@ -18,7 +18,8 @@
 
 <link rel="alternate" type="application/rss+xml" title="Crochet Baby Gifts" href="https://crochetbabygifts.com/rss.xml">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="/fonts/dmseriftext-latin.ttf" as="font" type="font/ttf" crossorigin><!-- Google Analytics 4 with Consent Mode v2. Ad storage is denied everywhere (no ads). Analytics cookies are denied
+<link rel="preload" href="/fonts/dmseriftext-latin.ttf" as="font" type="font/ttf" crossorigin><!-- Google Analytics 4 with Consent Mode v2. Ad storage is denied for the GA tag, which needs none (the HBAgency ads
+ask for consent through their own IAB TCF window). Analytics cookies are denied
 by default in the EEA, UK and Switzerland, where Google applies the region list by the visitor's IP, until the visitor
 accepts the consent bar at the foot of the page. A stored choice ("cbg-consent" in localStorage) wins everywhere. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6156532FH"></script>
@@ -30,7 +31,8 @@ region:['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','I
 (function(){var c=null;try{c=localStorage.getItem('cbg-consent');}catch(e){}if(c==='granted'||c==='denied'){gtag('consent','update',{analytics_storage:c});}})();
 gtag('js',new Date());
 gtag('config','G-E6156532FH',{allow_google_signals:false,allow_ad_personalization_signals:false});
-</script>
+</script><!-- HBAgency header bidding, article pages only (D9). It brings its own IAB TCF consent window for EU/UK visitors. -->
+<script defer src="https://d3u598arehftfk.cloudfront.net/prebid_hb_40090_44308.js"></script>
 <style>
 @font-face{font-family:"DM Serif Text";src:url("/fonts/dmseriftext-latin.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
 :root{
@@ -144,6 +146,12 @@ margin:0 0 .5rem;font-weight:700;color:var(--ink-soft)}
 .related ul{margin:0;padding-left:1.1rem}
 .related li{margin-bottom:.35rem}
 
+/* ad slots (HBAgency); min-height keeps the text from jumping when an ad loads */
+.ad-slot{display:block;text-align:center;margin:1.6rem auto;overflow:hidden}
+.ad-top{min-height:100px}
+.ad-mid{min-height:280px}
+@media (min-width:48rem){.ad-top{min-height:250px}}
+
 /* consent bar (Google Analytics) */
 .consent{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--oat);border-top:1px solid var(--linen);
 padding:.8rem 1rem;font-size:.9rem;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center}
@@ -203,7 +211,8 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
     <time datetime="2026-10-12">12 October 2026</time>
     <span class="dot">&middot;</span><span>10 min read</span>
   </p>
-  <h1>Easy Crochet Baby Booties in Four Sizes: A Round-by-Round Guide</h1>  <p class="lede"><strong>Crochet an oval sole in three rounds of half double crochet, turn the sides up with one back-loop round, shape the toe over five rounds, then work the ankle straight and finish with a single crochet edge.</strong> One set of instructions makes four sizes, from newborn to 12 months, by changing only the starting chain and the hook. Each pair takes a little DK yarn in two colours and a 3.5 to 4.5 mm hook. This guide follows Craft &amp; Crochet&rsquo;s video below and writes out every round for every size.</p>
+  <h1>Easy Crochet Baby Booties in Four Sizes: A Round-by-Round Guide</h1>  <div class="ad-slot ad-top" id="hbagency_space_346236"></div>
+  <p class="lede"><strong>Crochet an oval sole in three rounds of half double crochet, turn the sides up with one back-loop round, shape the toe over five rounds, then work the ankle straight and finish with a single crochet edge.</strong> One set of instructions makes four sizes, from newborn to 12 months, by changing only the starting chain and the hook. Each pair takes a little DK yarn in two colours and a 3.5 to 4.5 mm hook. This guide follows Craft &amp; Crochet&rsquo;s video below and writes out every round for every size.</p>
 <figure class="fig" id="fig-booties-hero">
 <img src="/img/booties/easy-crochet-baby-booties-hero.jpg" width="608" height="226" alt="A pink crochet baby boot with a cream sole edge and a cream band round the top, on a wooden table." loading="eager" decoding="async">
 </figure>
@@ -255,6 +264,7 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 </tr>
 </tbody>
 </table></div>
+<div class="ad-slot ad-mid" id="hbagency_space_346237"></div>
 <h2>Pick your size</h2>
 <p>The design comes in two widths. A 9-chain start makes the newborn and 0–3 month sizes, and a 10-chain start makes the 3–6 and 6–12 month sizes. The hook decides the size within each pair.</p>
 <div class="tablewrap"><table>
@@ -497,8 +507,9 @@ The design has no buttons, beads, ribbons or ties, so there are no small parts t
 <p><em>Tutorial credit: Craft &amp; Crochet, <a href="https://www.youtube.com/watch?v=EexCF17_lYA">&ldquo;Easy crochet baby booties&rdquo;</a>, 2021. Written up by crochetbabygifts from the video&rsquo;s subtitles; crochet terms are in US English.</em></p>  <aside class="related">
     <h2>Keep reading</h2>
     <ul>      <li><a href="/crochet-hook-size-chart/">Crochet Hook Size Chart: US, UK and Metric Conversions</a></li>      <li><a href="/machine-washable-yarn-for-baby-gifts/">Machine-Washable Yarn for Baby Gifts: What to Look For</a></li>    </ul>
-  </aside></article>
-</main>
+  </aside></article><div id="hbagency_space_346234"></div>
+<div id="hbagency_space_346233"></div>
+<div id="hbagency_space_346235"></div></main>
 
 <footer class="site">
   <div class="wrap">

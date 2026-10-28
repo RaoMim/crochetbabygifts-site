@@ -18,7 +18,8 @@
 
 <link rel="alternate" type="application/rss+xml" title="Crochet Baby Gifts" href="https://crochetbabygifts.com/rss.xml">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="/fonts/dmseriftext-latin.ttf" as="font" type="font/ttf" crossorigin><!-- Google Analytics 4 with Consent Mode v2. Ad storage is denied everywhere (no ads). Analytics cookies are denied
+<link rel="preload" href="/fonts/dmseriftext-latin.ttf" as="font" type="font/ttf" crossorigin><!-- Google Analytics 4 with Consent Mode v2. Ad storage is denied for the GA tag, which needs none (the HBAgency ads
+ask for consent through their own IAB TCF window). Analytics cookies are denied
 by default in the EEA, UK and Switzerland, where Google applies the region list by the visitor's IP, until the visitor
 accepts the consent bar at the foot of the page. A stored choice ("cbg-consent" in localStorage) wins everywhere. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6156532FH"></script>
@@ -30,7 +31,8 @@ region:['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','I
 (function(){var c=null;try{c=localStorage.getItem('cbg-consent');}catch(e){}if(c==='granted'||c==='denied'){gtag('consent','update',{analytics_storage:c});}})();
 gtag('js',new Date());
 gtag('config','G-E6156532FH',{allow_google_signals:false,allow_ad_personalization_signals:false});
-</script>
+</script><!-- HBAgency header bidding, article pages only (D9). It brings its own IAB TCF consent window for EU/UK visitors. -->
+<script defer src="https://d3u598arehftfk.cloudfront.net/prebid_hb_40090_44308.js"></script>
 <style>
 @font-face{font-family:"DM Serif Text";src:url("/fonts/dmseriftext-latin.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
 :root{
@@ -144,6 +146,12 @@ margin:0 0 .5rem;font-weight:700;color:var(--ink-soft)}
 .related ul{margin:0;padding-left:1.1rem}
 .related li{margin-bottom:.35rem}
 
+/* ad slots (HBAgency); min-height keeps the text from jumping when an ad loads */
+.ad-slot{display:block;text-align:center;margin:1.6rem auto;overflow:hidden}
+.ad-top{min-height:100px}
+.ad-mid{min-height:280px}
+@media (min-width:48rem){.ad-top{min-height:250px}}
+
 /* consent bar (Google Analytics) */
 .consent{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--oat);border-top:1px solid var(--linen);
 padding:.8rem 1rem;font-size:.9rem;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center}
@@ -203,7 +211,8 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
     <time datetime="2026-10-28">28 October 2026</time>
     <span class="dot">&middot;</span><span>5 min read</span>
   </p>
-  <h1>How to Present a Handmade Baby Blanket as a Gift</h1>  <p class="lede"><strong>Wash it, fold it so the texture shows, tie it with a wide ribbon, and write a tag that says what it is made of, how to wash it, and what it is for.</strong> The tag matters more than the wrapping, and the &ldquo;what it is for&rdquo; sentence matters most of all.</p>
+  <h1>How to Present a Handmade Baby Blanket as a Gift</h1>  <div class="ad-slot ad-top" id="hbagency_space_346236"></div>
+  <p class="lede"><strong>Wash it, fold it so the texture shows, tie it with a wide ribbon, and write a tag that says what it is made of, how to wash it, and what it is for.</strong> The tag matters more than the wrapping, and the &ldquo;what it is for&rdquo; sentence matters most of all.</p>
 <h2>Why presentation decides whether it gets used</h2>
 <p>A handmade blanket arrives carrying a small burden of anxiety. The recipient does not know whether it can go in the machine, whether it is safe for the crib, or whether it is too nice to use. Faced with three unknowns and no sleep, the safe choice is to put it somewhere clean and deal with it later.</p>
 <p>Later does not come. That is how handmade blankets end up in cupboards, and it is not a failure of the blanket.</p>
@@ -212,6 +221,7 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 <p>Counterintuitive for a gift, and correct.</p>
 <p>It removes manufacturing residue and any dye that has not fully set — the most common cause of skin reactions to a new handmade item, ahead of the fibre itself. It also pre-shrinks anything that was going to shrink, so the first wash in their house is uneventful. And it lets you say &ldquo;it has been washed&rdquo; on the tag, which quietly answers the machine question.</p>
 <p>Fragrance-free, dye-free detergent. No fabric softener.</p>
+<div class="ad-slot ad-mid" id="hbagency_space_346237"></div>
 <h2>The tag</h2>
 <p>This is the part that does the work. Three things, and it fits on a small card.</p>
 <p><strong>1. What it is made of.</strong> <em>&ldquo;100% cotton&rdquo;</em> or <em>&ldquo;acrylic&rdquo;</em>. In twenty years, when it is a keepsake being stored, someone will need this to wash it safely.</p>
@@ -254,8 +264,9 @@ It is a nice touch and gives them the exact fibre and care symbols. Tuck it in r
 Better, in some ways — you can make the size that fits the season they are actually in, and the gift arrives when the shower presents have run out.</p>  <aside class="related">
     <h2>Keep reading</h2>
     <ul>      <li><a href="/are-crochet-blankets-safe-for-babies/">Are Crochet Blankets Safe for Babies to Sleep With?</a></li>      <li><a href="/what-to-give-at-a-baby-shower/">What to Give at a Baby Shower When You Can't Crochet</a></li>      <li><a href="/how-to-wash-a-crochet-baby-blanket/">How to Wash a Crochet Baby Blanket Without Ruining It</a></li>    </ul>
-  </aside></article>
-</main>
+  </aside></article><div id="hbagency_space_346234"></div>
+<div id="hbagency_space_346233"></div>
+<div id="hbagency_space_346235"></div></main>
 
 <footer class="site">
   <div class="wrap">

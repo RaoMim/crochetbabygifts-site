@@ -146,12 +146,6 @@ margin:0 0 .5rem;font-weight:700;color:var(--ink-soft)}
 .related ul{margin:0;padding-left:1.1rem}
 .related li{margin-bottom:.35rem}
 
-/* ad slots (HBAgency); min-height keeps the text from jumping when an ad loads */
-.ad-slot{display:block;text-align:center;margin:1.6rem auto;overflow:hidden}
-.ad-top{min-height:100px}
-.ad-mid{min-height:280px}
-@media (min-width:48rem){.ad-top{min-height:250px}}
-
 /* consent bar (Google Analytics) */
 .consent{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--oat);border-top:1px solid var(--linen);
 padding:.8rem 1rem;font-size:.9rem;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center}
@@ -188,8 +182,20 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 }
 </style>
 </head>
-<body>
-<a href="#main" class="skip">Skip to content</a>
+<body><!-- HBAgency placement code, copied verbatim from the dashboard (Inventory > Placements, 2026-10-28). The floor ad
+(346233) and the left rail (346234) must sit right under <body>, outside any other div; the interstitial (346235) can
+go anywhere in the body. The in-image (346236) and in-article (346237) codes are in article.html and build.py. -->
+<div  id='HB_Footer_Close_hbagency_space_346233'>
+ <div id='HB_CLOSE_hbagency_space_346233'></div>
+ <div id='HB_OUTER_hbagency_space_346233'>
+<div id='hbagency_space_346233'></div>
+ </div></div>
+<div  id='HB_Footer_Close_hbagency_space_346234'>
+ <div id='HB_CLOSE_hbagency_space_346234'></div>
+ <div id='HB_OUTER_hbagency_space_346234'>
+<div id='hbagency_space_346234'></div>
+ </div></div>
+<div id='hbagency_space_346235'></div><a href="#main" class="skip">Skip to content</a>
 <header class="site">
   <div class="wrap">
     <a class="brand" href="/" aria-label="Crochet Baby Gifts home">
@@ -211,7 +217,7 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
     <time datetime="2026-07-30">30 July 2026</time>
     <span class="dot">&middot;</span><span>4 min read</span>
   </p>
-  <h1>Yarn Weight Chart for Baby Projects (0–7, and What Each One Is Good For)</h1>  <figure class="fig hero"><img src="/img/heroes/yarn-weight-chart-for-baby-projects-hero.webp" width="1672" height="941" alt="Yarn skeins in different thicknesses with loose strands on cream linen." srcset="/img/heroes/yarn-weight-chart-for-baby-projects-hero-480w.webp 480w, /img/heroes/yarn-weight-chart-for-baby-projects-hero-800w.webp 800w, /img/heroes/yarn-weight-chart-for-baby-projects-hero-1200w.webp 1200w, /img/heroes/yarn-weight-chart-for-baby-projects-hero.webp 1672w" sizes="(max-width: 38rem) calc(100vw - 2rem), 35.5rem" loading="eager" fetchpriority="high" decoding="async"></figure>  <div class="ad-slot ad-top" id="hbagency_space_346236"></div>
+  <h1>Yarn Weight Chart for Baby Projects (0–7, and What Each One Is Good For)</h1>  <figure class="fig hero"><img src="/img/heroes/yarn-weight-chart-for-baby-projects-hero.webp" width="1672" height="941" alt="Yarn skeins in different thicknesses with loose strands on cream linen." srcset="/img/heroes/yarn-weight-chart-for-baby-projects-hero-480w.webp 480w, /img/heroes/yarn-weight-chart-for-baby-projects-hero-800w.webp 800w, /img/heroes/yarn-weight-chart-for-baby-projects-hero-1200w.webp 1200w, /img/heroes/yarn-weight-chart-for-baby-projects-hero.webp 1672w" sizes="(max-width: 38rem) calc(100vw - 2rem), 35.5rem" loading="eager" fetchpriority="high" decoding="async"></figure>  <div id='hbagency_space_346236'></div>
   <p class="lede"><strong>For most baby projects you want weight 3 (DK) or weight 4 (worsted).</strong> Weight 3 for anything worn — hats, booties, cardigans. Weight 4 for blankets. Everything else has a use, but those two cover the great majority of baby gifts.</p>
 <p>Here is the whole system, and then the part that matters: which weight to pick for what.</p>
 <h2>The standard yarn weight chart</h2>
@@ -352,7 +358,9 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 <h3>Two warnings the charts don&rsquo;t give you</h3>
 <p><strong>Do not use weight 6 or 7 for anything a baby sleeps near.</strong> Super bulky and jumbo blankets have gaps between stitches large enough for a small hand or foot to go through, and they are heavy. They photograph beautifully. That is their whole appeal, and it is not a good reason.</p>
 <p><strong>Do not use weight 4 for baby clothes.</strong> It is the right answer for blankets and the wrong answer for cardigans. A worsted-weight baby cardigan comes out thick, stiff and about a third heavier than the child wants to wear.</p>
-<div class="ad-slot ad-mid" id="hbagency_space_346237"></div>
+<div class="hb-ad-inpage">
+    <div class="hb-ad-inner"> 
+    <div class="hbagency_cls hbagency_space_346237"></div></div> </div>
 <h2>Substituting one weight for another</h2>
 <p>You can, within one step, if you adjust. Going from weight 4 to weight 3 with the same instructions gives you a finished item roughly <strong>10–15% smaller</strong>. Going the other way makes it that much bigger.</p>
 <p>The way to substitute properly:</p>
@@ -380,9 +388,8 @@ Yes. Two strands of DK approximates a weight 5 bulky reasonably well. Two strand
 Weight 5 bulky is a good balance of speed and safety. Weight 6 and 7 are faster still but produce gaps and weight you don&rsquo;t want on a baby item.</p>  <aside class="related">
     <h2>Keep reading</h2>
     <ul>      <li><a href="/crochet-hook-size-chart/">Crochet Hook Size Chart: US, UK and Metric Conversions</a></li>      <li><a href="/how-much-yarn-for-a-baby-blanket/">How Much Yarn for a Baby Blanket? Yardage by Size and Yarn Weight</a></li>      <li><a href="/best-yarn-for-baby-blankets/">The Best Yarn for Baby Blankets: Soft, Washable and Safe</a></li>    </ul>
-  </aside></article><div id="hbagency_space_346234"></div>
-<div id="hbagency_space_346233"></div>
-<div id="hbagency_space_346235"></div></main>
+  </aside></article>
+</main>
 
 <footer class="site">
   <div class="wrap">

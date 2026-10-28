@@ -146,12 +146,6 @@ margin:0 0 .5rem;font-weight:700;color:var(--ink-soft)}
 .related ul{margin:0;padding-left:1.1rem}
 .related li{margin-bottom:.35rem}
 
-/* ad slots (HBAgency); min-height keeps the text from jumping when an ad loads */
-.ad-slot{display:block;text-align:center;margin:1.6rem auto;overflow:hidden}
-.ad-top{min-height:100px}
-.ad-mid{min-height:280px}
-@media (min-width:48rem){.ad-top{min-height:250px}}
-
 /* consent bar (Google Analytics) */
 .consent{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--oat);border-top:1px solid var(--linen);
 padding:.8rem 1rem;font-size:.9rem;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center}
@@ -188,8 +182,20 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 }
 </style>
 </head>
-<body>
-<a href="#main" class="skip">Skip to content</a>
+<body><!-- HBAgency placement code, copied verbatim from the dashboard (Inventory > Placements, 2026-10-28). The floor ad
+(346233) and the left rail (346234) must sit right under <body>, outside any other div; the interstitial (346235) can
+go anywhere in the body. The in-image (346236) and in-article (346237) codes are in article.html and build.py. -->
+<div  id='HB_Footer_Close_hbagency_space_346233'>
+ <div id='HB_CLOSE_hbagency_space_346233'></div>
+ <div id='HB_OUTER_hbagency_space_346233'>
+<div id='hbagency_space_346233'></div>
+ </div></div>
+<div  id='HB_Footer_Close_hbagency_space_346234'>
+ <div id='HB_CLOSE_hbagency_space_346234'></div>
+ <div id='HB_OUTER_hbagency_space_346234'>
+<div id='hbagency_space_346234'></div>
+ </div></div>
+<div id='hbagency_space_346235'></div><a href="#main" class="skip">Skip to content</a>
 <header class="site">
   <div class="wrap">
     <a class="brand" href="/" aria-label="Crochet Baby Gifts home">
@@ -211,7 +217,7 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
     <time datetime="2026-10-25">25 October 2026</time>
     <span class="dot">&middot;</span><span>15 min read</span>
   </p>
-  <h1>Easy Crochet Baby Hat for Beginners: Free Pattern in 5 Sizes, Preemie to 12 Months</h1>  <figure class="fig hero"><img src="/img/heroes/easy-crochet-baby-hat-hero.webp" width="1376" height="768" alt="Illustration of a sage-green half double crochet baby hat with a ribbed brim, laid flat beside a ball of the same yarn." srcset="/img/heroes/easy-crochet-baby-hat-hero-480w.webp 480w, /img/heroes/easy-crochet-baby-hat-hero-800w.webp 800w, /img/heroes/easy-crochet-baby-hat-hero-1200w.webp 1200w, /img/heroes/easy-crochet-baby-hat-hero.webp 1376w" sizes="(max-width: 38rem) calc(100vw - 2rem), 35.5rem" loading="eager" fetchpriority="high" decoding="async"></figure>  <div class="ad-slot ad-top" id="hbagency_space_346236"></div>
+  <h1>Easy Crochet Baby Hat for Beginners: Free Pattern in 5 Sizes, Preemie to 12 Months</h1>  <figure class="fig hero"><img src="/img/heroes/easy-crochet-baby-hat-hero.webp" width="1376" height="768" alt="Illustration of a sage-green half double crochet baby hat with a ribbed brim, laid flat beside a ball of the same yarn." srcset="/img/heroes/easy-crochet-baby-hat-hero-480w.webp 480w, /img/heroes/easy-crochet-baby-hat-hero-800w.webp 800w, /img/heroes/easy-crochet-baby-hat-hero-1200w.webp 1200w, /img/heroes/easy-crochet-baby-hat-hero.webp 1376w" sizes="(max-width: 38rem) calc(100vw - 2rem), 35.5rem" loading="eager" fetchpriority="high" decoding="async"></figure>  <div id='hbagency_space_346236'></div>
   <p class="lede"><strong>Put 8 half double crochet into a small ring, add 8 stitches every round until the top of the hat is as wide as your size needs, then work plain rounds down to the right height and finish with 3 rounds of ribbing.</strong> That is the whole hat. The rest of this page is the numbers: the stitch count after every round, the round where your size stops growing, and one measurement that tells you the hat will fit before you have made the sides.</p>
 <p>For a newborn in worsted yarn on a 5.5 mm hook: <strong>6 rounds to reach 44 stitches, about 8 plain rounds, a 3-round brim, and about 75 yards of yarn.</strong> The finished hat is about 12½ inches around, 1 inch smaller than a newborn&rsquo;s head, so it stretches on and stays on.</p>
 <!-- arithmetic: newborn, from design/hat/hat_numbers.py. Head 13-14 in (baby-hat-size-chart), middle 13.5 - 1 in ease = 12.5 in. 12.5 x 14 / 4 = 43.75, nearest multiple of 4 = 44 sts; 44 x 4 / 14 = 12.57 in. Rounds 8, 16, 24, 32, 40, 44 = 6. Height 5.5 in x 12 / 4 = 16.5, so 17 rounds; 17 - 6 - 3 brim = 8 plain. Yarn: radius 12.57 / 2pi = 2.0 in; 12.57 x (5.5 - 2.0) + pi x 2.0^2 = 56.6 sq in; x 0.95 x 1.2 yd per sq in x 1.15 = 74.2, rounded up to 75 yd. -->
@@ -260,7 +266,9 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 <h2>Why the top decides the size</h2>
 <p>The top of the hat is a flat circle that grows by 8 stitches every round. When you stop adding stitches, you have fixed the hat&rsquo;s size: every round after that has the same number of stitches, so the hat is as big around as that last increase round. That is why this pattern tells you which round to stop on for your size, and why the one measurement that matters comes right after it.</p>
 <p>A hat should be 1 to 2 inches smaller around than the head. We aim for 1 inch, the gentle end of that range, because half double crochet gives less than a knitted fabric. The ribbed brim adds the stretch that holds it on. Our <a href="/baby-hat-size-chart/">baby hat size chart</a> explains this negative ease and where the head sizes come from.</p>
-<div class="ad-slot ad-mid" id="hbagency_space_346237"></div>
+<div class="hb-ad-inpage">
+    <div class="hb-ad-inner"> 
+    <div class="hbagency_cls hbagency_space_346237"></div></div> </div>
 <h2>Pick your size</h2>
 <!-- table:sizes -->
 <div class="tablewrap"><table>
@@ -685,9 +693,8 @@ No. The American Academy of Pediatrics advises against hats on babies indoors, e
 <p><em>Sources: head sizes from our <a href="/baby-hat-size-chart/">baby hat size chart</a>, checked against the WHO head-circumference medians. Gauge from two published Lion Brand worsted blanket patterns in half double crochet. The rounds, stitch counts, heights and yarn amounts are our own arithmetic. Crochet terms are in US English.</em></p>  <aside class="related">
     <h2>Keep reading</h2>
     <ul>      <li><a href="/baby-hat-size-chart/">Baby Hat Size Chart by Age (Preemie to 3 Years)</a></li>      <li><a href="/how-to-crochet-a-baby-blanket/">How to Crochet a Baby Blanket for Beginners: Free Pattern in Every Size</a></li>      <li><a href="/easy-crochet-baby-booties/">Easy Crochet Baby Booties in Four Sizes: A Round-by-Round Guide</a></li>      <li><a href="/machine-washable-yarn-for-baby-gifts/">Machine-Washable Yarn for Baby Gifts: What to Look For</a></li>      <li><a href="/crochet-hook-size-chart/">Crochet Hook Size Chart: US, UK and Metric Conversions</a></li>    </ul>
-  </aside></article><div id="hbagency_space_346234"></div>
-<div id="hbagency_space_346233"></div>
-<div id="hbagency_space_346235"></div></main>
+  </aside></article>
+</main>
 
 <footer class="site">
   <div class="wrap">

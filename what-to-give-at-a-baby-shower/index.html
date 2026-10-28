@@ -146,12 +146,6 @@ margin:0 0 .5rem;font-weight:700;color:var(--ink-soft)}
 .related ul{margin:0;padding-left:1.1rem}
 .related li{margin-bottom:.35rem}
 
-/* ad slots (HBAgency); min-height keeps the text from jumping when an ad loads */
-.ad-slot{display:block;text-align:center;margin:1.6rem auto;overflow:hidden}
-.ad-top{min-height:100px}
-.ad-mid{min-height:280px}
-@media (min-width:48rem){.ad-top{min-height:250px}}
-
 /* consent bar (Google Analytics) */
 .consent{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--oat);border-top:1px solid var(--linen);
 padding:.8rem 1rem;font-size:.9rem;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center}
@@ -188,8 +182,20 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 }
 </style>
 </head>
-<body>
-<a href="#main" class="skip">Skip to content</a>
+<body><!-- HBAgency placement code, copied verbatim from the dashboard (Inventory > Placements, 2026-10-28). The floor ad
+(346233) and the left rail (346234) must sit right under <body>, outside any other div; the interstitial (346235) can
+go anywhere in the body. The in-image (346236) and in-article (346237) codes are in article.html and build.py. -->
+<div  id='HB_Footer_Close_hbagency_space_346233'>
+ <div id='HB_CLOSE_hbagency_space_346233'></div>
+ <div id='HB_OUTER_hbagency_space_346233'>
+<div id='hbagency_space_346233'></div>
+ </div></div>
+<div  id='HB_Footer_Close_hbagency_space_346234'>
+ <div id='HB_CLOSE_hbagency_space_346234'></div>
+ <div id='HB_OUTER_hbagency_space_346234'>
+<div id='hbagency_space_346234'></div>
+ </div></div>
+<div id='hbagency_space_346235'></div><a href="#main" class="skip">Skip to content</a>
 <header class="site">
   <div class="wrap">
     <a class="brand" href="/" aria-label="Crochet Baby Gifts home">
@@ -211,7 +217,7 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
     <time datetime="2026-07-30">30 July 2026</time>
     <span class="dot">&middot;</span><span>5 min read</span>
   </p>
-  <h1>What to Give at a Baby Shower When You Can't Crochet</h1>  <figure class="fig hero"><img src="/img/heroes/what-to-give-at-a-baby-shower-hero-v2.webp" width="1672" height="941" alt="Basket of cream muslin cloths and a sage bib with a blank gift tag." srcset="/img/heroes/what-to-give-at-a-baby-shower-hero-v2-480w.webp 480w, /img/heroes/what-to-give-at-a-baby-shower-hero-v2-800w.webp 800w, /img/heroes/what-to-give-at-a-baby-shower-hero-v2-1200w.webp 1200w, /img/heroes/what-to-give-at-a-baby-shower-hero-v2.webp 1672w" sizes="(max-width: 38rem) calc(100vw - 2rem), 35.5rem" loading="eager" fetchpriority="high" decoding="async"></figure>  <div class="ad-slot ad-top" id="hbagency_space_346236"></div>
+  <h1>What to Give at a Baby Shower When You Can't Crochet</h1>  <figure class="fig hero"><img src="/img/heroes/what-to-give-at-a-baby-shower-hero-v2.webp" width="1672" height="941" alt="Basket of cream muslin cloths and a sage bib with a blank gift tag." srcset="/img/heroes/what-to-give-at-a-baby-shower-hero-v2-480w.webp 480w, /img/heroes/what-to-give-at-a-baby-shower-hero-v2-800w.webp 800w, /img/heroes/what-to-give-at-a-baby-shower-hero-v2-1200w.webp 1200w, /img/heroes/what-to-give-at-a-baby-shower-hero-v2.webp 1672w" sizes="(max-width: 38rem) calc(100vw - 2rem), 35.5rem" loading="eager" fetchpriority="high" decoding="async"></figure>  <div id='hbagency_space_346236'></div>
   <p class="lede"><strong>Give the thing they will run out of, in the size nobody else buys, and put a real note with it.</strong> That is the whole method, and it beats a handmade item chosen badly.</p>
 <p>Most baby shower advice is a list of products. This is not that. It is the three questions that decide whether a gift gets used or ends up in the returns pile, and they are worth more than any list.</p>
 <h2>Question 1: will they run out of this?</h2>
@@ -222,7 +228,9 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 <p>Look at when the baby is actually due, then add six months, and dress that child.</p>
 <p>A baby born in November will be nine months old the following August and will need summer clothes in 9–12 month size — which nobody at a November shower is buying. That gift arrives when the cupboard is empty and gets remembered.</p>
 <p><strong>Sizes to give:</strong> 6–9 months and 9–12 months. <strong>Sizes to avoid:</strong> newborn and 0–3, which will be overflowing.</p>
-<div class="ad-slot ad-mid" id="hbagency_space_346237"></div>
+<div class="hb-ad-inpage">
+    <div class="hb-ad-inner"> 
+    <div class="hbagency_cls hbagency_space_346237"></div></div> </div>
 <h2>Question 3: does it require them to do anything?</h2>
 <p>A gift that needs assembling, registering, hand-washing, or a decision about whether they even want it is a small task disguised as a present. New parents have no capacity for tasks.</p>
 <p>Things that are secretly tasks: anything needing batteries you did not include, anything requiring a size or colour choice later, anything hand-wash only, and — gently — anything that arrives as an IOU.</p>
@@ -303,9 +311,8 @@ Yes. Buy the item from a maker and handle the presentation and the note yourself
 A wearable blanket or sleep sack, in size 6–12 months rather than newborn.</p>  <aside class="related">
     <h2>Keep reading</h2>
     <ul>      <li><a href="/are-crochet-blankets-safe-for-babies/">Are Crochet Blankets Safe for Babies to Sleep With?</a></li>      <li><a href="/best-yarn-for-baby-blankets/">The Best Yarn for Baby Blankets: Soft, Washable and Safe</a></li>      <li><a href="/crochet-baby-blanket-size-chart/">Crochet Baby Blanket Size Chart: Every Size, Newborn to Toddler</a></li>    </ul>
-  </aside></article><div id="hbagency_space_346234"></div>
-<div id="hbagency_space_346233"></div>
-<div id="hbagency_space_346235"></div></main>
+  </aside></article>
+</main>
 
 <footer class="site">
   <div class="wrap">

@@ -146,12 +146,6 @@ margin:0 0 .5rem;font-weight:700;color:var(--ink-soft)}
 .related ul{margin:0;padding-left:1.1rem}
 .related li{margin-bottom:.35rem}
 
-/* ad slots (HBAgency); min-height keeps the text from jumping when an ad loads */
-.ad-slot{display:block;text-align:center;margin:1.6rem auto;overflow:hidden}
-.ad-top{min-height:100px}
-.ad-mid{min-height:280px}
-@media (min-width:48rem){.ad-top{min-height:250px}}
-
 /* consent bar (Google Analytics) */
 .consent{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--oat);border-top:1px solid var(--linen);
 padding:.8rem 1rem;font-size:.9rem;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center}
@@ -188,8 +182,20 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 }
 </style>
 </head>
-<body>
-<a href="#main" class="skip">Skip to content</a>
+<body><!-- HBAgency placement code, copied verbatim from the dashboard (Inventory > Placements, 2026-10-28). The floor ad
+(346233) and the left rail (346234) must sit right under <body>, outside any other div; the interstitial (346235) can
+go anywhere in the body. The in-image (346236) and in-article (346237) codes are in article.html and build.py. -->
+<div  id='HB_Footer_Close_hbagency_space_346233'>
+ <div id='HB_CLOSE_hbagency_space_346233'></div>
+ <div id='HB_OUTER_hbagency_space_346233'>
+<div id='hbagency_space_346233'></div>
+ </div></div>
+<div  id='HB_Footer_Close_hbagency_space_346234'>
+ <div id='HB_CLOSE_hbagency_space_346234'></div>
+ <div id='HB_OUTER_hbagency_space_346234'>
+<div id='hbagency_space_346234'></div>
+ </div></div>
+<div id='hbagency_space_346235'></div><a href="#main" class="skip">Skip to content</a>
 <header class="site">
   <div class="wrap">
     <a class="brand" href="/" aria-label="Crochet Baby Gifts home">
@@ -211,7 +217,7 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
     <time datetime="2026-10-14">14 October 2026</time>
     <span class="dot">&middot;</span><span>20 min read</span>
   </p>
-  <h1>How to Crochet a Baby Blanket for Beginners: Free Pattern in Every Size</h1>  <figure class="fig hero"><img src="/img/heroes/how-to-crochet-a-baby-blanket-hero.webp" width="1376" height="768" alt="Illustration of a sage-green half double crochet baby blanket with an ivory border, folded beside a ball of yarn." srcset="/img/heroes/how-to-crochet-a-baby-blanket-hero-480w.webp 480w, /img/heroes/how-to-crochet-a-baby-blanket-hero-800w.webp 800w, /img/heroes/how-to-crochet-a-baby-blanket-hero-1200w.webp 1200w, /img/heroes/how-to-crochet-a-baby-blanket-hero.webp 1376w" sizes="(max-width: 38rem) calc(100vw - 2rem), 35.5rem" loading="eager" fetchpriority="high" decoding="async"></figure>  <div class="ad-slot ad-top" id="hbagency_space_346236"></div>
+  <h1>How to Crochet a Baby Blanket for Beginners: Free Pattern in Every Size</h1>  <figure class="fig hero"><img src="/img/heroes/how-to-crochet-a-baby-blanket-hero.webp" width="1376" height="768" alt="Illustration of a sage-green half double crochet baby blanket with an ivory border, folded beside a ball of yarn." srcset="/img/heroes/how-to-crochet-a-baby-blanket-hero-480w.webp 480w, /img/heroes/how-to-crochet-a-baby-blanket-hero-800w.webp 800w, /img/heroes/how-to-crochet-a-baby-blanket-hero-1200w.webp 1200w, /img/heroes/how-to-crochet-a-baby-blanket-hero.webp 1376w" sizes="(max-width: 38rem) calc(100vw - 2rem), 35.5rem" loading="eager" fetchpriority="high" decoding="async"></figure>  <div id='hbagency_space_346236'></div>
   <p class="lede"><strong>Chain one more than the stitches you want, work half double crochet into every stitch, row after row, until the blanket is long enough, then go round it three times in single crochet.</strong> That is the whole blanket. The rest of this page is the numbers that make it come out the size you meant: how many to chain from one small swatch, the stitch count every row must have, and exactly how many border stitches go along each side.</p>
 <p>For a first blanket we suggest the 30 × 30 inch receiving size in worsted yarn on a 6 mm hook: <strong>chain 83, keep 82 stitches in every row, work about 73 rows, and have about 930 yards of yarn</strong>, which is three 364-yard skeins.</p>
 <!-- arithmetic: receiving size, worsted, from design/blanket/blanket_numbers.py. Body 30 - 2 x 0.75 = 28.5 in. 28.5 x 101/35 = 82.2, so 82 stitches, chain 83. 28.5 x 90/35 = 73.3, so 73 rows. Yarn 30 x 30 x (3 x 364 / 1,225) = 802 yd, x 1.15 = 922, rounded up to 930. 930 / 364 = 2.6, so 3 skeins. -->
@@ -267,7 +273,9 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 </tr>
 </tbody>
 </table></div>
-<div class="ad-slot ad-mid" id="hbagency_space_346237"></div>
+<div class="hb-ad-inpage">
+    <div class="hb-ad-inner"> 
+    <div class="hbagency_cls hbagency_space_346237"></div></div> </div>
 <h2>Why the swatch comes first</h2>
 <p>Two published worsted blankets show why one fixed chain count cannot work for everyone. The video&rsquo;s blanket comes out at about 11.5 half double crochet stitches to 4 inches on a 6 mm hook. A worsted blanket kit from a large yarn maker gives 14 stitches to 4 inches on a 5.5 mm hook. Chain the video&rsquo;s 82 stitches at that second gauge and the blanket is about 23½ inches wide instead of 28½. That is 5 inches lost before you have made a mistake.</p>
 <!-- arithmetic: 82 x 4 / 14 = 23.4 in; 82 x 4 / 11.54 = 28.4 in. Lion Brand William Blanket (Worsted), Wool-Ease, "14 stitches across x 12 rows high" on 5.5 mm (research/next-article/blanket-sources-2026-10-13.md item 1). -->
@@ -724,9 +732,8 @@ Soft, machine-washable acrylic is the usual choice for a gift. Our guide to the 
 <p><em>Video credit: Amanda Crochets, <a href="https://www.youtube.com/watch?v=la2x8iUrcA0">&ldquo;Easy Half Double Crochet Blanket | Easy Crochet Blanket Tutorial&rdquo;</a>, 2021. The rows follow the video. The sizes, the stitch counts, the yarn amounts and the border are our own arithmetic. Crochet terms are in US English.</em></p>  <aside class="related">
     <h2>Keep reading</h2>
     <ul>      <li><a href="/crochet-baby-blanket-size-chart/">Crochet Baby Blanket Size Chart: Every Size, Newborn to Toddler</a></li>      <li><a href="/how-much-yarn-for-a-baby-blanket/">How Much Yarn for a Baby Blanket? Yardage by Size and Yarn Weight</a></li>      <li><a href="/yarn-weight-chart-for-baby-projects/">Yarn Weight Chart for Baby Projects (0–7, and What Each One Is Good For)</a></li>      <li><a href="/crochet-hook-size-chart/">Crochet Hook Size Chart: US, UK and Metric Conversions</a></li>      <li><a href="/are-crochet-blankets-safe-for-babies/">Are Crochet Blankets Safe for Babies to Sleep With?</a></li>    </ul>
-  </aside></article><div id="hbagency_space_346234"></div>
-<div id="hbagency_space_346233"></div>
-<div id="hbagency_space_346235"></div></main>
+  </aside></article>
+</main>
 
 <footer class="site">
   <div class="wrap">

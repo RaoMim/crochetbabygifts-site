@@ -146,12 +146,6 @@ margin:0 0 .5rem;font-weight:700;color:var(--ink-soft)}
 .related ul{margin:0;padding-left:1.1rem}
 .related li{margin-bottom:.35rem}
 
-/* ad slots (HBAgency); min-height keeps the text from jumping when an ad loads */
-.ad-slot{display:block;text-align:center;margin:1.6rem auto;overflow:hidden}
-.ad-top{min-height:100px}
-.ad-mid{min-height:280px}
-@media (min-width:48rem){.ad-top{min-height:250px}}
-
 /* consent bar (Google Analytics) */
 .consent{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--oat);border-top:1px solid var(--linen);
 padding:.8rem 1rem;font-size:.9rem;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center}
@@ -188,8 +182,20 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 }
 </style>
 </head>
-<body>
-<a href="#main" class="skip">Skip to content</a>
+<body><!-- HBAgency placement code, copied verbatim from the dashboard (Inventory > Placements, 2026-10-28). The floor ad
+(346233) and the left rail (346234) must sit right under <body>, outside any other div; the interstitial (346235) can
+go anywhere in the body. The in-image (346236) and in-article (346237) codes are in article.html and build.py. -->
+<div  id='HB_Footer_Close_hbagency_space_346233'>
+ <div id='HB_CLOSE_hbagency_space_346233'></div>
+ <div id='HB_OUTER_hbagency_space_346233'>
+<div id='hbagency_space_346233'></div>
+ </div></div>
+<div  id='HB_Footer_Close_hbagency_space_346234'>
+ <div id='HB_CLOSE_hbagency_space_346234'></div>
+ <div id='HB_OUTER_hbagency_space_346234'>
+<div id='hbagency_space_346234'></div>
+ </div></div>
+<div id='hbagency_space_346235'></div><a href="#main" class="skip">Skip to content</a>
 <header class="site">
   <div class="wrap">
     <a class="brand" href="/" aria-label="Crochet Baby Gifts home">
@@ -211,7 +217,7 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
     <time datetime="2026-07-30">30 July 2026</time>
     <span class="dot">&middot;</span><span>5 min read</span>
   </p>
-  <h1>The Best Yarn for Baby Blankets: Soft, Washable and Safe</h1>  <figure class="fig hero"><img src="/img/heroes/best-yarn-for-baby-blankets-hero.webp" width="1672" height="941" alt="Cream, sage and blush yarn with crochet swatches on a pale oak surface." srcset="/img/heroes/best-yarn-for-baby-blankets-hero-480w.webp 480w, /img/heroes/best-yarn-for-baby-blankets-hero-800w.webp 800w, /img/heroes/best-yarn-for-baby-blankets-hero-1200w.webp 1200w, /img/heroes/best-yarn-for-baby-blankets-hero.webp 1672w" sizes="(max-width: 38rem) calc(100vw - 2rem), 35.5rem" loading="eager" fetchpriority="high" decoding="async"></figure>  <div class="ad-slot ad-top" id="hbagency_space_346236"></div>
+  <h1>The Best Yarn for Baby Blankets: Soft, Washable and Safe</h1>  <figure class="fig hero"><img src="/img/heroes/best-yarn-for-baby-blankets-hero.webp" width="1672" height="941" alt="Cream, sage and blush yarn with crochet swatches on a pale oak surface." srcset="/img/heroes/best-yarn-for-baby-blankets-hero-480w.webp 480w, /img/heroes/best-yarn-for-baby-blankets-hero-800w.webp 800w, /img/heroes/best-yarn-for-baby-blankets-hero-1200w.webp 1200w, /img/heroes/best-yarn-for-baby-blankets-hero.webp 1672w" sizes="(max-width: 38rem) calc(100vw - 2rem), 35.5rem" loading="eager" fetchpriority="high" decoding="async"></figure>  <div id='hbagency_space_346236'></div>
   <p class="lede"><strong>For a baby blanket that will actually get used, choose a machine-washable, tumble-dryable, weight-4 yarn in acrylic, a cotton-acrylic blend, or superwash merino.</strong> That is the whole answer. Everything below is about why, and about the trade-off you are making when you pick something else.</p>
 <h2>The four properties that matter, in order</h2>
 <p>Softness is fourth on this list, which surprises people. Here is the order that survives contact with a real household.</p>
@@ -310,7 +316,9 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 <h3>The case against chenille and velvet yarns</h3>
 <p>They are the most-photographed baby blanket yarns on the internet and the most complained-about in use. They shed fibres, they &ldquo;worm&rdquo; (individual stitches twist out of the fabric surface), and the shedding is the reason to think hard before using them for something that sits near a baby&rsquo;s face.</p>
 <p>If you want the look, use a velvet yarn for a toy or a cushion, not a blanket.</p>
-<div class="ad-slot ad-mid" id="hbagency_space_346237"></div>
+<div class="hb-ad-inpage">
+    <div class="hb-ad-inner"> 
+    <div class="hbagency_cls hbagency_space_346237"></div></div> </div>
 <h2>What about wool sensitivity?</h2>
 <p>True wool allergy is rare. What is common is <strong>irritation from coarse fibre diameter</strong> — the prickle you feel from a scratchy jumper is mechanical, not allergic, and fine merino usually does not cause it where coarse wool does.</p>
 <p>But &ldquo;usually&rdquo; is doing work in that sentence, and you will not be there when the blanket is used. <strong>For a gift, when you do not know the family, choose acrylic or a cotton blend.</strong> For your own child, whose skin you know, wool is a reasonable choice.</p>
@@ -335,9 +343,8 @@ Only if they have the same care requirements and similar weight. A blanket that 
 Weight 4, medium/worsted, for most baby blankets. See the <a href="/yarn-weight-chart-for-baby-projects/">yarn weight chart</a>.</p>  <aside class="related">
     <h2>Keep reading</h2>
     <ul>      <li><a href="/is-acrylic-yarn-safe-for-babies/">Is Acrylic Yarn Safe for Babies? An Honest Answer</a></li>      <li><a href="/yarn-weight-chart-for-baby-projects/">Yarn Weight Chart for Baby Projects (0–7, and What Each One Is Good For)</a></li>      <li><a href="/how-to-wash-a-crochet-baby-blanket/">How to Wash a Crochet Baby Blanket Without Ruining It</a></li>    </ul>
-  </aside></article><div id="hbagency_space_346234"></div>
-<div id="hbagency_space_346233"></div>
-<div id="hbagency_space_346235"></div></main>
+  </aside></article>
+</main>
 
 <footer class="site">
   <div class="wrap">

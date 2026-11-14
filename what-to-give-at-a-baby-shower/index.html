@@ -61,11 +61,13 @@ min-width:0}
 .brand svg{display:block;flex:none}
 .brand b{font-family:var(--serif);font-weight:400;font-size:1.2rem;letter-spacing:-.01em;
 line-height:1;white-space:nowrap}
-nav.site{min-width:0}
-nav.site a{color:var(--ink-soft);text-decoration:none;font-size:.9rem;margin-left:1.1rem;
-white-space:nowrap}
-nav.site a:first-child{margin-left:0}
+/* The category menu wraps onto a second line on a phone, so every category stays visible (a sideways-scrolling
+   strip hid Gifts and Yarn & tools off the right edge at 375 px). */
+nav.site{min-width:0;max-width:100%;display:flex;flex-wrap:wrap;gap:.2rem 1.1rem}
+nav.site a{color:var(--ink-soft);text-decoration:none;font-size:.92rem;white-space:nowrap;
+padding:.15rem 0;border-bottom:2px solid transparent}
 nav.site a:hover{color:var(--clay)}
+nav.site a[aria-current]{color:var(--clay);border-bottom-color:var(--clay)}
 
 /* type */
 h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.015em;line-height:1.18;color:var(--ink)}
@@ -134,6 +136,25 @@ margin:0 0 .8rem}
 color:var(--ink-soft);background:var(--oat);border-radius:2rem;padding:.18rem .6rem;
 margin-bottom:.5rem;font-weight:650}
 
+/* home page sections: most popular, new, then one per category (site/home_page.py) */
+.home-sec{margin-top:2.8rem}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;
+border-bottom:2px solid var(--clay);padding-bottom:.45rem}
+.sec-h{font-size:clamp(1.3rem,3.4vw,1.6rem);margin:0}
+.sec-h a{color:var(--ink);text-decoration:none}
+.sec-h a:hover{color:var(--clay)}
+.sec-all{font-size:.9rem;white-space:nowrap;text-decoration:none;font-weight:600}
+.sec-note{font-size:.82rem;color:var(--ink-soft);margin:1rem 0 0}
+.cards-popular{grid-template-columns:repeat(auto-fill,minmax(min(20rem,100%),1fr))}
+.cards-popular a{font-size:1.3rem}
+.rank{position:absolute;top:.55rem;left:.55rem;z-index:1;width:1.9rem;height:1.9rem;border-radius:50%;
+background:var(--clay);color:#fff;font-weight:700;font-size:.9rem;display:flex;align-items:center;
+justify-content:center;box-shadow:0 1px 3px rgba(46,42,38,.25)}
+/* Descriptions are long; three lines on a card, the rest on the article. */
+.cards p{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.crumb{font-size:.85rem;color:var(--ink-soft);margin:0 0 .4rem}
+.crumb a{color:var(--ink-soft)}
+
 /* section heading on index */
 .pillar-h{font-family:var(--sans);font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;
 color:var(--clay);font-weight:700;margin:2.5rem 0 .3rem;padding-bottom:.4rem;
@@ -200,13 +221,7 @@ go anywhere in the body. The in-image (346236) and in-article (346237) codes are
   <div class="wrap">
     <a class="brand" href="/" aria-label="Crochet Baby Gifts home">
 <svg width="27" height="27" viewBox="0 0 28 28" role="img" aria-hidden="true" focusable="false"><path d="M20.8 8.4a8.4 8.4 0 1 0 0 11.2" fill="none" stroke="#C97C5B" stroke-width="3.3" stroke-linecap="round"/><circle cx="20.5" cy="14" r="3" fill="#8C9E7E"/></svg>      <b>crochetbabygifts</b>
-    </a>
-    <nav class="site" aria-label="Main">
-      <a href="/#charts">Charts</a>
-      <a href="/#yarn">Yarn</a>
-      <a href="/#gifts">Gifts</a>
-      <a href="/about/">About</a>
-    </nav>
+    </a>    <nav class="site" aria-label="Categories">      <a href="/category/blankets/">Blankets</a>      <a href="/category/booties/">Booties</a>      <a href="/category/hats/">Hats</a>      <a href="/category/bags/">Bags</a>      <a href="/category/toys/">Toys</a>      <a href="/category/gifts/" aria-current="page">Gifts</a>      <a href="/category/yarn/">Yarn & tools</a>    </nav>
   </div>
 </header>
 

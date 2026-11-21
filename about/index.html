@@ -99,6 +99,7 @@ figure.fig img{display:block;width:100%;height:auto;border:1px solid var(--linen
 /* Article hero: the 16:9 illustration under the title, shown whole at every width (no crop). */
 figure.fig.hero{margin:1.1rem 0 1.6rem}
 figure.fig figcaption{margin-top:.55rem;font-size:.88rem;line-height:1.45;color:var(--ink-soft)}
+figure.fig.hero figcaption{margin-top:.35rem;font-size:.78rem}
 table{border-collapse:collapse;width:100%;font-size:.94rem;min-width:22rem}
 th,td{text-align:left;padding:.6rem .7rem;border-bottom:1px solid var(--linen);vertical-align:top}
 thead th{background:var(--oat);font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;
@@ -222,14 +223,14 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 <li><strong>Care and safety.</strong> How to wash a handmade blanket, how to store a keepsake, and what current infant safe-sleep guidance actually says about loose blankets.</li>
 <li><strong>Gifting advice.</strong> What to give, how to present it, what to write on the tag.</li>
 <li><strong>Beginner explainers.</strong> Plain answers to the questions people ask before they start.</li>
-<li><strong>Patterns and project guides.</strong> A few simple patterns of our own, and written guides to other makers&rsquo; projects, each credited.</li>
+<li><strong>Patterns and project guides.</strong> Written patterns for baby clothes, blankets, booties, bags, flowers and ornaments, most of them paired with a free video tutorial by another maker, and guides to other makers&rsquo; projects. Each is credited.</li>
 </ul>
 <h2>Whose patterns these are</h2>
-<p><strong>Some patterns are our own designs</strong>, such as a single-crochet zip case or a little crochet snowman. Some are written to measurements so they follow your gauge, and others give the stitch count for every round. Where a pattern has not yet been test-made, the page says so.</p>
+<p><strong>Most patterns here are written to go with a free video tutorial by another maker.</strong> The page names the maker, links the video and embeds it. Usually that video shows a different or similar design, or teaches a stitch or technique, and the written pattern, sizes and counts on our page are our own. Some are written to measurements so they follow your gauge, and others give the stitch count for every round. Where a pattern has not yet been test-made, the page says so.</p>
 <p><strong>Some project guides follow another designer&rsquo;s work, and say so.</strong> A guide to a creator&rsquo;s video tutorial names the creator and links the video. An attributed adaptation names the designer, links the original source and states what has or has not been independently tested. Neither is presented as our original design.</p>
-<p><strong>We do not republish another designer&rsquo;s PDF or photographs.</strong></p>
+<p><strong>We do not republish another designer&rsquo;s PDF, photos or written pattern.</strong> Video tutorials are linked and credited, not copied.</p>
 <h2>How the content is made</h2>
-<p>Articles are drafted with AI assistance and then reviewed by a human before publication. Every number in a chart traces back to a real, checkable source — a published standard, a regulation, or a measurement — and where a figure is an estimate, the page says so and says what it is based on. Where something genuinely cannot be pinned down, the page says that too, rather than inventing a confident answer.</p>
+<p>Articles are drafted with AI assistance and then reviewed by a human before publication. The pictures at the top of articles are illustrations, not photos of finished pieces. Some are AI-generated and some are drawn by code. The one exception is the <a href="/crochet-tshirt-yarn-clutch/">T-shirt yarn clutch</a> page, which shows photos of clutches the site owner made. The diagrams and charts are drawn by code from the page&rsquo;s own numbers. Every number in a chart traces back to a real, checkable source — a published standard, a regulation, or a measurement — and where a figure is an estimate, the page says so and says what it is based on. Where something genuinely cannot be pinned down, the page says that too, rather than inventing a confident answer.</p>
 <p>That last part is the actual editorial position of this site. Most craft reference content presents convention as if it were standard. Blanket &ldquo;standard sizes&rdquo; are a convention; yarn weights genuinely are a standard. Knowing which is which is useful, and almost nobody says it.</p>
 <p>The full policy is on the <a href="/editorial-policy/">editorial policy</a> page.</p>
 <h2>Contact</h2>
@@ -246,8 +247,8 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
       <a href="/editorial-policy/">Editorial policy</a>
       <a href="/rss.xml">RSS</a>
     </nav>
-    <p>Independent guides and reference charts for handmade baby gifts. We publish a few simple
-    patterns of our own and clearly credit designers when a project guide adapts their work.</p>
+    <p>Independent guides and reference charts for handmade baby gifts. We publish free written patterns,
+    most paired with another maker's credited video tutorial, and clearly credit designers when a project guide adapts their work.</p>
     <p>&copy; 2026 Crochet Baby Gifts. Nothing here is medical advice — for infant sleep
     safety, follow your paediatrician and current AAP guidance.</p>
   </div>
@@ -260,10 +261,13 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 (function(){var bar=document.getElementById('cbg-consent');if(!bar)return;var c=null;try{c=localStorage.getItem('cbg-consent');}catch(e){}
 var tz='';try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone||'';}catch(e){}
 var europe=/^Europe\//.test(tz)||/^Atlantic\/(Reykjavik|Canary|Madeira|Azores|Faroe)$/.test(tz);
-window.cbgConsentReset=function(){try{localStorage.removeItem('cbg-consent');}catch(e){}bar.hidden=false;return false;};
-if(!c&&europe){bar.hidden=false;}
+/* The fixed bar would cover the end of the footer, so the page gets that much padding while the bar shows. */
+function pad(){document.body.style.paddingBottom=bar.hidden?'':bar.offsetHeight+'px';}
+if(window.ResizeObserver){new ResizeObserver(pad).observe(bar);}else{window.addEventListener('resize',pad);}
+window.cbgConsentReset=function(){try{localStorage.removeItem('cbg-consent');}catch(e){}bar.hidden=false;pad();return false;};
+if(!c&&europe){bar.hidden=false;pad();}
 bar.addEventListener('click',function(e){var v=e.target.getAttribute('data-consent');if(!v)return;
-try{localStorage.setItem('cbg-consent',v);}catch(err){}if(window.gtag){gtag('consent','update',{analytics_storage:v});}bar.hidden=true;});})();
+try{localStorage.setItem('cbg-consent',v);}catch(err){}if(window.gtag){gtag('consent','update',{analytics_storage:v});}bar.hidden=true;pad();});})();
 </script><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://crochetbabygifts.com/#org", "name": "Crochet Baby Gifts", "url": "https://crochetbabygifts.com/", "description": "Free crochet patterns and guides for handmade baby gifts and small bags.", "logo": {"@type": "ImageObject", "url": "https://crochetbabygifts.com/logo.png", "width": 600, "height": 600}, "sameAs": ["https://www.pinterest.com/babygiftscrochet/"]}, {"@type": "WebSite", "@id": "https://crochetbabygifts.com/#website", "url": "https://crochetbabygifts.com/", "name": "Crochet Baby Gifts", "description": "Free crochet patterns and guides for handmade baby gifts and small bags.", "publisher": {"@id": "https://crochetbabygifts.com/#org"}, "inLanguage": "en"}]}</script>
 </body>
 </html>

@@ -99,6 +99,7 @@ figure.fig img{display:block;width:100%;height:auto;border:1px solid var(--linen
 /* Article hero: the 16:9 illustration under the title, shown whole at every width (no crop). */
 figure.fig.hero{margin:1.1rem 0 1.6rem}
 figure.fig figcaption{margin-top:.55rem;font-size:.88rem;line-height:1.45;color:var(--ink-soft)}
+figure.fig.hero figcaption{margin-top:.35rem;font-size:.78rem}
 table{border-collapse:collapse;width:100%;font-size:.94rem;min-width:22rem}
 th,td{text-align:left;padding:.6rem .7rem;border-bottom:1px solid var(--linen);vertical-align:top}
 thead th{background:var(--oat);font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;
@@ -216,7 +217,7 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
     <span>Beginner Guides</span><span class="dot">&middot;</span>
     <time datetime="2026-11-19">19 November 2026</time>    <span class="dot">&middot;</span><span>10 min read</span>
   </p>
-  <h1>Crochet Baby Socks: Free Easy Pattern in Three Sizes, 0 to 12 Months</h1>  <figure class="fig hero"><img src="/img/heroes/crochet-baby-socks-hero.webp" width="1376" height="768" alt="Illustration of a pair of pale pink crochet baby socks with rounded toes and ribbed cuffs, lying on a soft cream knitted blanket." srcset="/img/heroes/crochet-baby-socks-hero-480w.webp 480w, /img/heroes/crochet-baby-socks-hero-800w.webp 800w, /img/heroes/crochet-baby-socks-hero-1200w.webp 1200w, /img/heroes/crochet-baby-socks-hero.webp 1376w" sizes="(max-width: 38rem) calc(100vw - 2rem), 35.5rem" loading="eager" fetchpriority="high" decoding="async"></figure>  <p class="lede"><strong>Crochet a small oval for the toe, work the foot straight in single crochet, leave a row of chains where the heel will go, then work the leg and a ribbed cuff. The heel goes in last, into that gap.</strong> In DK yarn on a 3.5 mm hook the 0–3 month sock is about 11 cm round and 9 cm from toe to heel.</p>
+  <h1>Crochet Baby Socks: Free Easy Pattern in Three Sizes, 0 to 12 Months</h1>  <figure class="fig hero"><img src="/img/heroes/crochet-baby-socks-hero.webp" width="1376" height="768" alt="Illustration of a pair of pale pink crochet baby socks with rounded toes and ribbed cuffs, lying on a soft cream knitted blanket." srcset="/img/heroes/crochet-baby-socks-hero-480w.webp 480w, /img/heroes/crochet-baby-socks-hero-800w.webp 800w, /img/heroes/crochet-baby-socks-hero-1200w.webp 1200w, /img/heroes/crochet-baby-socks-hero.webp 1376w" sizes="(max-width: 38rem) calc(100vw - 2rem), 35.5rem" loading="eager" fetchpriority="high" decoding="async"><figcaption>Illustration, not a photo of a finished piece.</figcaption></figure>  <p class="lede"><strong>Crochet a small oval for the toe, work the foot straight in single crochet, leave a row of chains where the heel will go, then work the leg and a ribbed cuff. The heel goes in last, into that gap.</strong> In DK yarn on a 3.5 mm hook the 0–3 month sock is about 11 cm round and 9 cm from toe to heel.</p>
 <p><strong><a href="/pdf/crochet-baby-socks.pdf">Download the free printable PDF</a></strong>: the whole pattern, the size table and the diagram, ready to print. No sign-up.</p>
 <p>This is our own design, and it has not yet been test-made from this page. A script checks every round against the one before it, the foot against our <a href="/baby-bootie-size-chart/">bootie size chart</a> and the cuff against measured baby ankles. The sizes are worked out from a gauge, so the first thing to check is your own sock against the size table.</p>
 <p><strong>Find what you need:</strong> <a href="#sizes">pick your size</a> · <a href="#materials">materials</a> · <a href="#video">the video</a> · <a href="#pattern">the pattern</a> · <a href="#fit">fit check</a> · <a href="#made-for-a-baby">made for a baby</a>.</p>
@@ -395,8 +396,8 @@ It is a good second one. The toe and foot are plain single crochet; the heel ope
       <a href="/editorial-policy/">Editorial policy</a>
       <a href="/rss.xml">RSS</a>
     </nav>
-    <p>Independent guides and reference charts for handmade baby gifts. We publish a few simple
-    patterns of our own and clearly credit designers when a project guide adapts their work.</p>
+    <p>Independent guides and reference charts for handmade baby gifts. We publish free written patterns,
+    most paired with another maker's credited video tutorial, and clearly credit designers when a project guide adapts their work.</p>
     <p>&copy; 2026 Crochet Baby Gifts. Nothing here is medical advice — for infant sleep
     safety, follow your paediatrician and current AAP guidance.</p>
   </div>
@@ -409,10 +410,13 @@ It is a good second one. The toe and foot are plain single crochet; the heel ope
 (function(){var bar=document.getElementById('cbg-consent');if(!bar)return;var c=null;try{c=localStorage.getItem('cbg-consent');}catch(e){}
 var tz='';try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone||'';}catch(e){}
 var europe=/^Europe\//.test(tz)||/^Atlantic\/(Reykjavik|Canary|Madeira|Azores|Faroe)$/.test(tz);
-window.cbgConsentReset=function(){try{localStorage.removeItem('cbg-consent');}catch(e){}bar.hidden=false;return false;};
-if(!c&&europe){bar.hidden=false;}
+/* The fixed bar would cover the end of the footer, so the page gets that much padding while the bar shows. */
+function pad(){document.body.style.paddingBottom=bar.hidden?'':bar.offsetHeight+'px';}
+if(window.ResizeObserver){new ResizeObserver(pad).observe(bar);}else{window.addEventListener('resize',pad);}
+window.cbgConsentReset=function(){try{localStorage.removeItem('cbg-consent');}catch(e){}bar.hidden=false;pad();return false;};
+if(!c&&europe){bar.hidden=false;pad();}
 bar.addEventListener('click',function(e){var v=e.target.getAttribute('data-consent');if(!v)return;
-try{localStorage.setItem('cbg-consent',v);}catch(err){}if(window.gtag){gtag('consent','update',{analytics_storage:v});}bar.hidden=true;});})();
+try{localStorage.setItem('cbg-consent',v);}catch(err){}if(window.gtag){gtag('consent','update',{analytics_storage:v});}bar.hidden=true;pad();});})();
 </script><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://crochetbabygifts.com/#org", "name": "Crochet Baby Gifts", "url": "https://crochetbabygifts.com/", "description": "Free crochet patterns and guides for handmade baby gifts and small bags.", "logo": {"@type": "ImageObject", "url": "https://crochetbabygifts.com/logo.png", "width": 600, "height": 600}, "sameAs": ["https://www.pinterest.com/babygiftscrochet/"]}, {"@type": "WebSite", "@id": "https://crochetbabygifts.com/#website", "url": "https://crochetbabygifts.com/", "name": "Crochet Baby Gifts", "description": "Free crochet patterns and guides for handmade baby gifts and small bags.", "publisher": {"@id": "https://crochetbabygifts.com/#org"}, "inLanguage": "en"}, {"@type": "Article", "@id": "https://crochetbabygifts.com/crochet-baby-socks/#article", "headline": "Crochet Baby Socks: Free Easy Pattern in Three Sizes, 0 to 12 Months", "description": "Our own free crochet baby socks pattern, worked toe-up in the round in single crochet with an afterthought heel and a ribbed cuff. Three sizes sized to our bootie size chart and measured infant ankles, every round checked, and a Spanish video tutorial for a different sock.", "url": "https://crochetbabygifts.com/crochet-baby-socks/", "datePublished": "2026-11-19", "dateModified": "2026-11-19", "articleSection": "Beginner Guides", "author": {"@id": "https://crochetbabygifts.com/#org"}, "publisher": {"@id": "https://crochetbabygifts.com/#org"}, "isPartOf": {"@id": "https://crochetbabygifts.com/#website"}, "image": "https://crochetbabygifts.com/img/heroes/crochet-baby-socks-hero-og.jpg", "inLanguage": "en"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://crochetbabygifts.com/"}, {"@type": "ListItem", "position": 2, "name": "Booties", "item": "https://crochetbabygifts.com/category/booties/"}, {"@type": "ListItem", "position": 3, "name": "Crochet Baby Socks: Free Easy Pattern in Three Sizes, 0 to 12 Months", "item": "https://crochetbabygifts.com/crochet-baby-socks/"}]}]}</script>
 </body>
 </html>

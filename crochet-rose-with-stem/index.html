@@ -99,6 +99,7 @@ figure.fig img{display:block;width:100%;height:auto;border:1px solid var(--linen
 /* Article hero: the 16:9 illustration under the title, shown whole at every width (no crop). */
 figure.fig.hero{margin:1.1rem 0 1.6rem}
 figure.fig figcaption{margin-top:.55rem;font-size:.88rem;line-height:1.45;color:var(--ink-soft)}
+figure.fig.hero figcaption{margin-top:.35rem;font-size:.78rem}
 table{border-collapse:collapse;width:100%;font-size:.94rem;min-width:22rem}
 th,td{text-align:left;padding:.6rem .7rem;border-bottom:1px solid var(--linen);vertical-align:top}
 thead th{background:var(--oat);font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;
@@ -216,7 +217,7 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
     <span>Beginner Guides</span><span class="dot">&middot;</span>
     <time datetime="2026-11-16">16 November 2026</time>    <span class="dot">&middot;</span><span>7 min read</span>
   </p>
-  <h1>Crochet Rose With Stem: Free Pattern for a Long-Stem Rose With Leaves</h1>  <figure class="fig hero"><img src="/img/heroes/crochet-rose-with-stem-hero.webp" width="760" height="570" alt="Illustration of a red crochet rose with cupped, curled petals round a closed centre, on a green stem with a leaf, against a cream background with small white flowers." srcset="/img/heroes/crochet-rose-with-stem-hero-480w.webp 480w, /img/heroes/crochet-rose-with-stem-hero.webp 760w" sizes="(max-width: 38rem) calc(100vw - 2rem), 35.5rem" loading="eager" fetchpriority="high" decoding="async"></figure>  <p class="lede"><strong>Crochet a small closed centre and 12 wired petals in three sizes, wrap them round the top of a wire stem, then add a calyx and two sprigs of leaves.</strong> The thin wire inside each petal&rsquo;s edge lets you curl it open like a real rose. In DK cotton on a 3.5 mm hook the rose comes out about 10 cm across on a 30 cm (12 in) stem.</p>
+  <h1>Crochet Rose With Stem: Free Pattern for a Long-Stem Rose With Leaves</h1>  <figure class="fig hero"><img src="/img/heroes/crochet-rose-with-stem-hero.webp" width="760" height="570" alt="Illustration of a red crochet rose with cupped, curled petals round a closed centre, on a green stem with a leaf, against a cream background with small white flowers." srcset="/img/heroes/crochet-rose-with-stem-hero-480w.webp 480w, /img/heroes/crochet-rose-with-stem-hero.webp 760w" sizes="(max-width: 38rem) calc(100vw - 2rem), 35.5rem" loading="eager" fetchpriority="high" decoding="async"><figcaption>Illustration, not a photo of a finished piece.</figcaption></figure>  <p class="lede"><strong>Crochet a small closed centre and 12 wired petals in three sizes, wrap them round the top of a wire stem, then add a calyx and two sprigs of leaves.</strong> The thin wire inside each petal&rsquo;s edge lets you curl it open like a real rose. In DK cotton on a 3.5 mm hook the rose comes out about 10 cm across on a 30 cm (12 in) stem.</p>
 <p><strong><a href="/pdf/crochet-rose-with-stem.pdf">Download the free printable PDF</a></strong>: the whole pattern, the petal table and the diagram, ready to print. No sign-up.</p>
 <p>This is our own design, and it has not yet been test-made from this page. A script checks every round, and the sizes and amounts are estimates worked out from a gauge.</p>
 <p><strong>Not for babies or small children.</strong> The petals and stem have wire inside, and a cut wire end is sharp. Fold every end over as the steps show, and keep the rose out of reach of little hands. The <a href="/handmade-baby-gift-safety-checklist/">handmade baby gift safety checklist</a> explains why.</p>
@@ -370,8 +371,8 @@ The wire was pulled tight while crocheting over it. Hold it loosely along the ed
       <a href="/editorial-policy/">Editorial policy</a>
       <a href="/rss.xml">RSS</a>
     </nav>
-    <p>Independent guides and reference charts for handmade baby gifts. We publish a few simple
-    patterns of our own and clearly credit designers when a project guide adapts their work.</p>
+    <p>Independent guides and reference charts for handmade baby gifts. We publish free written patterns,
+    most paired with another maker's credited video tutorial, and clearly credit designers when a project guide adapts their work.</p>
     <p>&copy; 2026 Crochet Baby Gifts. Nothing here is medical advice — for infant sleep
     safety, follow your paediatrician and current AAP guidance.</p>
   </div>
@@ -384,10 +385,13 @@ The wire was pulled tight while crocheting over it. Hold it loosely along the ed
 (function(){var bar=document.getElementById('cbg-consent');if(!bar)return;var c=null;try{c=localStorage.getItem('cbg-consent');}catch(e){}
 var tz='';try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone||'';}catch(e){}
 var europe=/^Europe\//.test(tz)||/^Atlantic\/(Reykjavik|Canary|Madeira|Azores|Faroe)$/.test(tz);
-window.cbgConsentReset=function(){try{localStorage.removeItem('cbg-consent');}catch(e){}bar.hidden=false;return false;};
-if(!c&&europe){bar.hidden=false;}
+/* The fixed bar would cover the end of the footer, so the page gets that much padding while the bar shows. */
+function pad(){document.body.style.paddingBottom=bar.hidden?'':bar.offsetHeight+'px';}
+if(window.ResizeObserver){new ResizeObserver(pad).observe(bar);}else{window.addEventListener('resize',pad);}
+window.cbgConsentReset=function(){try{localStorage.removeItem('cbg-consent');}catch(e){}bar.hidden=false;pad();return false;};
+if(!c&&europe){bar.hidden=false;pad();}
 bar.addEventListener('click',function(e){var v=e.target.getAttribute('data-consent');if(!v)return;
-try{localStorage.setItem('cbg-consent',v);}catch(err){}if(window.gtag){gtag('consent','update',{analytics_storage:v});}bar.hidden=true;});})();
+try{localStorage.setItem('cbg-consent',v);}catch(err){}if(window.gtag){gtag('consent','update',{analytics_storage:v});}bar.hidden=true;pad();});})();
 </script><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://crochetbabygifts.com/#org", "name": "Crochet Baby Gifts", "url": "https://crochetbabygifts.com/", "description": "Free crochet patterns and guides for handmade baby gifts and small bags.", "logo": {"@type": "ImageObject", "url": "https://crochetbabygifts.com/logo.png", "width": 600, "height": 600}, "sameAs": ["https://www.pinterest.com/babygiftscrochet/"]}, {"@type": "WebSite", "@id": "https://crochetbabygifts.com/#website", "url": "https://crochetbabygifts.com/", "name": "Crochet Baby Gifts", "description": "Free crochet patterns and guides for handmade baby gifts and small bags.", "publisher": {"@id": "https://crochetbabygifts.com/#org"}, "inLanguage": "en"}, {"@type": "Article", "@id": "https://crochetbabygifts.com/crochet-rose-with-stem/#article", "headline": "Crochet Rose With Stem: Free Pattern for a Long-Stem Rose With Leaves", "description": "Our own free pattern for a crochet long-stem rose: a closed centre, 12 wired petals in three sizes that curl open, a five-point calyx and two sprigs of three wired leaves on a wrapped wire stem. Every round checked, with the wire and yarn worked out.", "url": "https://crochetbabygifts.com/crochet-rose-with-stem/", "datePublished": "2026-11-16", "dateModified": "2026-11-16", "articleSection": "Beginner Guides", "author": {"@id": "https://crochetbabygifts.com/#org"}, "publisher": {"@id": "https://crochetbabygifts.com/#org"}, "isPartOf": {"@id": "https://crochetbabygifts.com/#website"}, "image": "https://crochetbabygifts.com/img/heroes/crochet-rose-with-stem-hero-og.jpg", "inLanguage": "en"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://crochetbabygifts.com/"}, {"@type": "ListItem", "position": 2, "name": "Gifts", "item": "https://crochetbabygifts.com/category/gifts/"}, {"@type": "ListItem", "position": 3, "name": "Crochet Rose With Stem: Free Pattern for a Long-Stem Rose With Leaves", "item": "https://crochetbabygifts.com/crochet-rose-with-stem/"}]}]}</script>
 </body>
 </html>

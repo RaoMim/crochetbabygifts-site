@@ -99,6 +99,7 @@ figure.fig img{display:block;width:100%;height:auto;border:1px solid var(--linen
 /* Article hero: the 16:9 illustration under the title, shown whole at every width (no crop). */
 figure.fig.hero{margin:1.1rem 0 1.6rem}
 figure.fig figcaption{margin-top:.55rem;font-size:.88rem;line-height:1.45;color:var(--ink-soft)}
+figure.fig.hero figcaption{margin-top:.35rem;font-size:.78rem}
 table{border-collapse:collapse;width:100%;font-size:.94rem;min-width:22rem}
 th,td{text-align:left;padding:.6rem .7rem;border-bottom:1px solid var(--linen);vertical-align:top}
 thead th{background:var(--oat);font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;
@@ -222,10 +223,10 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 <p><strong>Analytics.</strong> Two tools.</p>
 <ul>
 <li><strong>Cloudflare Web Analytics</strong>, added 10 October 2026. It counts page views and records which page was visited, the referring site, the country, the browser and device type, and how fast the page loaded. Cloudflare states that it uses no cookies or local storage for this and does not fingerprint visitors by IP address or user agent.</li>
-<li><strong>Google Analytics 4</strong>, added 26 October 2026. It records the pages you view, the site that sent you, your approximate location (country and city), your device and browser, and some actions on the page: scrolling, clicking a link to another site, and downloading a PDF. Google states that Google Analytics 4 does not log or store IP addresses. We have turned off Google signals, ad personalisation and every optional data-sharing setting. Google keeps the detailed records for two months, its default. Google acts as our data processor under its data processing terms, and Google&rsquo;s own privacy policy applies to how it runs the service.</li>
+<li><strong>Google Analytics 4</strong>, added 26 October 2026. It records the pages you view, the site that sent you, your approximate location (country and city), your device and browser, and some actions on the page: scrolling, clicking a link to another site, and downloading a PDF. Google states that Google Analytics 4 does not log or store IP addresses. We have turned off Google signals, ad personalisation and every optional data-sharing setting. Google keeps the detailed records for two months, its default. Google acts as our data processor under its data processing terms, and Google&rsquo;s own privacy policy applies to how it runs the service. Google explains what it does with this data in <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use our services</a>.</li>
 </ul>
 <p>We look at totals and trends, not at individuals, and we do not combine this data with anything else.</p>
-<p><strong>Advertising.</strong> The site shows no ads. From 28 October to 15 November 2026 article pages carried ads managed by HBAgency, and that code has been removed. We plan to show ads through <strong>Google AdSense</strong>. When they start, Google and its partners will use cookies to show ads based on your visits to this and other sites, you will be able to turn personalised ads off in Google&rsquo;s Ads Settings, and this page will be updated before the first ad appears.</p>
+<p><strong>Advertising.</strong> The site shows no ads. From 28 October to 15 November 2026 article pages carried ads managed by HBAgency, and that code has been removed. We plan to show ads through <strong>Google AdSense</strong>. When they start, Google and its partners will use cookies to show ads based on your visits to this and other sites. You will be able to turn personalised ads off in <a href="https://adssettings.google.com">Google Ads Settings</a>, and opt out of personalised ads from many other ad companies at <a href="https://www.aboutads.info">www.aboutads.info</a>. This page will be updated before the first ad appears.</p>
 <p><strong>Third-party requests.</strong> The pages load one font file from this same domain. The requests to other servers are the analytics scripts: Cloudflare&rsquo;s (static.cloudflareinsights.com) and Google&rsquo;s (www.googletagmanager.com, reporting to google-analytics.com), which report the visit as described above. No font CDN, no image host. Some pages show a YouTube video. Each loads nothing from YouTube until you press its play button. Once you press play, the video comes from YouTube&rsquo;s privacy-enhanced player (youtube-nocookie.com) and YouTube&rsquo;s own privacy policy applies to that video.</p>
 <p><strong>Server logs.</strong> The site is served by Cloudflare, which, like all hosting providers, records ordinary technical request data such as IP address, user agent and the URL requested. This is standard operational logging, not something this site reads or analyses.</p>
 <p><strong>Email.</strong> If you email us, we have your email and whatever you wrote, for as long as needed to reply and keep a record of corrections. It is not added to any list, because there is no list.</p>
@@ -247,8 +248,8 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
       <a href="/editorial-policy/">Editorial policy</a>
       <a href="/rss.xml">RSS</a>
     </nav>
-    <p>Independent guides and reference charts for handmade baby gifts. We publish a few simple
-    patterns of our own and clearly credit designers when a project guide adapts their work.</p>
+    <p>Independent guides and reference charts for handmade baby gifts. We publish free written patterns,
+    most paired with another maker's credited video tutorial, and clearly credit designers when a project guide adapts their work.</p>
     <p>&copy; 2026 Crochet Baby Gifts. Nothing here is medical advice — for infant sleep
     safety, follow your paediatrician and current AAP guidance.</p>
   </div>
@@ -261,10 +262,13 @@ h1,h2,h3,p,li,td,th{overflow-wrap:break-word}
 (function(){var bar=document.getElementById('cbg-consent');if(!bar)return;var c=null;try{c=localStorage.getItem('cbg-consent');}catch(e){}
 var tz='';try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone||'';}catch(e){}
 var europe=/^Europe\//.test(tz)||/^Atlantic\/(Reykjavik|Canary|Madeira|Azores|Faroe)$/.test(tz);
-window.cbgConsentReset=function(){try{localStorage.removeItem('cbg-consent');}catch(e){}bar.hidden=false;return false;};
-if(!c&&europe){bar.hidden=false;}
+/* The fixed bar would cover the end of the footer, so the page gets that much padding while the bar shows. */
+function pad(){document.body.style.paddingBottom=bar.hidden?'':bar.offsetHeight+'px';}
+if(window.ResizeObserver){new ResizeObserver(pad).observe(bar);}else{window.addEventListener('resize',pad);}
+window.cbgConsentReset=function(){try{localStorage.removeItem('cbg-consent');}catch(e){}bar.hidden=false;pad();return false;};
+if(!c&&europe){bar.hidden=false;pad();}
 bar.addEventListener('click',function(e){var v=e.target.getAttribute('data-consent');if(!v)return;
-try{localStorage.setItem('cbg-consent',v);}catch(err){}if(window.gtag){gtag('consent','update',{analytics_storage:v});}bar.hidden=true;});})();
+try{localStorage.setItem('cbg-consent',v);}catch(err){}if(window.gtag){gtag('consent','update',{analytics_storage:v});}bar.hidden=true;pad();});})();
 </script><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://crochetbabygifts.com/#org", "name": "Crochet Baby Gifts", "url": "https://crochetbabygifts.com/", "description": "Free crochet patterns and guides for handmade baby gifts and small bags.", "logo": {"@type": "ImageObject", "url": "https://crochetbabygifts.com/logo.png", "width": 600, "height": 600}, "sameAs": ["https://www.pinterest.com/babygiftscrochet/"]}, {"@type": "WebSite", "@id": "https://crochetbabygifts.com/#website", "url": "https://crochetbabygifts.com/", "name": "Crochet Baby Gifts", "description": "Free crochet patterns and guides for handmade baby gifts and small bags.", "publisher": {"@id": "https://crochetbabygifts.com/#org"}, "inLanguage": "en"}]}</script>
 </body>
 </html>
